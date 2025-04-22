@@ -1,4 +1,63 @@
 { "commands": [
-
+{ "hdr": "70B", "fcm1": true, "dbg": true, "cmd": {"22": "18A0"}, "freq": 30,
+  "signals": [
+    {"id": "VOLKSWAGEN_TP_FR", "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 6.375, "div": 40, "unit": "bars" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"},
+    {"id": "VOLKSWAGEN_TP_FL", "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 6.375, "div": 40, "unit": "bars" }, "name": "Front left tire pressure",  "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "VOLKSWAGEN_TP_RL", "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 6.375, "div": 40, "unit": "bars" }, "name": "Rear left tire pressure",   "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "VOLKSWAGEN_TP_RR", "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 6.375, "div": 40, "unit": "bars" }, "name": "Rear right tire pressure",  "suggestedMetric": "rearRightTirePressure"}
+  ]},
+{ "hdr": "710", "dbg": true, "cmd": {"22": "2A0A"}, "freq": 30,
+  "signals": [
+    {"id": "VOLKSWAGEN_ODO_2", "path": "Trips", "fmt": { "len": 32, "max": 255, "unit": "kilometers" }, "name": "Odometer (alternative)", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "714", "dbg": true, "cmd": {"22": "202F"}, "freq": 30,
+  "signals": [
+    {"id": "VOLKSWAGEN_EOT",      "path": "Engine",  "fmt": {            "len": 8,  "max": 255,               "add": -58, "unit": "scalar"     }, "name": "Engine oil temperature"},
+    {"id": "VOLKSWAGEN_ODO_DASH", "path": "Trips",   "fmt": {            "len": 24, "max": 255,                           "unit": "kilometers" }, "name": "Odometer (dash)",          "suggestedMetric": "odometer"},
+    {"id": "VOLKSWAGEN_RANGE",    "path": "Trips",   "fmt": {            "len": 16, "max": 255,                           "unit": "kilometers" }, "name": "Range remaining",          "suggestedMetric": "fuelRange"},
+    {"id": "VOLKSWAGEN_FLV",      "path": "Fuel",    "fmt": {            "len": 16, "max": 255,    "div": 8,              "unit": "liters"     }, "name": "Fuel remaining",           "suggestedMetric": "fuelTankLevel"},
+    {"id": "VOLKSWAGEN_IAT",      "path": "Climate", "fmt": {            "len": 16, "max": 255,    "div": 10,             "unit": "celsius"    }, "name": "Interior air temperature"},
+    {"id": "VOLKSWAGEN_FLI_VOL",  "path": "Fuel",    "fmt": {"bix": 336, "len": 16, "max": 6553.5, "div": 10,             "unit": "liters"     }, "name": "Fuel level (volume)"}
+  ]},
+{ "hdr": "715", "dbg": true, "cmd": {"22": "2353"}, "freq": 3600,
+  "signals": [
+    {"id": "VOLKSWAGEN_CRSH_FRONT",      "path": "Trips", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Crashes, front"},
+    {"id": "VOLKSWAGEN_CRASH_CNT_DRVR",  "path": "Stats", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Crashes, driver side"},
+    {"id": "VOLKSWAGEN_CRASH_CNT_PSNGR", "path": "Stats", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Crashes, passenger side"},
+    {"id": "VOLKSWAGEN_CRASH_CNT_REAR",  "path": "Stats", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Crashes, rear"},
+    {"id": "VOLKSWAGEN_CRASH_CNT_ROLL",  "path": "Stats", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Crashes, rollover"}
+  ]},
+{ "hdr": "746", "fcm1": true, "dbg": true, "cmd": {"22": "27C4"}, "freq": 30,
+  "signals": [
+    {"id": "VOLKSWAGEN_WNDSHLD_TEMP", "path": "Climate", "fmt": { "len": 8, "max": 108.08, "min": -38.8, "mul": 0.576, "add": -38.8, "unit": "celsius" }, "name": "Windshield temperature"}
+  ]},
+{ "hdr": "7E0", "dbg": true, "cmd": {"22": "11BA"}, "freq": 15,
+  "signals": [
+    {"id": "VOLKSWAGEN_OIL_LEVEL", "path": "Engine", "fmt": { "len": 16, "max": 262,      "div": 250, "unit": "unknown"     }, "name": "Oil level"},
+    {"id": "VOLKSWAGEN_OIL_MAX",   "path": "Fluids", "fmt": { "len": 16, "max": 262,      "div": 250, "unit": "centimeters" }, "name": "Oil level (max)"},
+    {"id": "VOLKSWAGEN_OIL_MIN",   "path": "Fluids", "fmt": { "len": 16, "max": 262,      "div": 250, "unit": "centimeters" }, "name": "Oil level (min)"},
+    {"id": "VOLKSWAGEN_ODO",       "path": "Trips",  "fmt": { "len": 24, "max": 16777215,             "unit": "kilometers"  }, "name": "Odometer",        "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "7E1", "dbg": true, "cmd": {"22": "0302"}, "freq": 900,
+  "signals": [
+    {"id": "VOLKSWAGEN_DRIVE_TIME",        "path": "Stats",    "fmt": { "len": 16, "max": 16383, "div": 4,   "unit": "hours"             }, "name": "Total drive time"},
+    {"id": "VOLKSWAGEN_DRIVE_TIME_ECO",    "path": "Stats",    "fmt": { "len": 8,  "max": 100,   "div": 2.5, "unit": "percent"           }, "name": "Driving time (eco)",      "description": "Value may be wrong, needs more validation. Proportion of time spent driving in eco mode"},
+    {"id": "VOLKSWAGEN_DRIVE_TIME_SPORT",  "path": "Stats",    "fmt": { "len": 8,  "max": 100,   "div": 2.5, "unit": "percent"           }, "name": "Driving time (sport)",    "description": "Value may be wrong, needs more validation. Proportion of time spent driving in sport mode"},
+    {"id": "VOLKSWAGEN_DRIVE_TIME_MANUAL", "path": "Stats",    "fmt": { "len": 8,  "max": 100,   "div": 2.5, "unit": "percent"           }, "name": "Driving time (manual)",   "description": "Value may be wrong, needs more validation. Proportion of time spent driving in manual mode"},
+    {"id": "VOLKSWAGEN_TIRE_FL_SPD",       "path": "Movement", "fmt": { "len": 16, "max": 1000,  "div": 10,  "unit": "kilometersPerHour" }, "name": "Front left wheel speed"},
+    {"id": "VOLKSWAGEN_TIRE_FR_SPD",       "path": "Movement", "fmt": { "len": 16, "max": 1000,  "div": 10,  "unit": "kilometersPerHour" }, "name": "Front right wheel speed"},
+    {"id": "VOLKSWAGEN_TIRE_RL_SPD",       "path": "Movement", "fmt": { "len": 16, "max": 1000,  "div": 10,  "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"},
+    {"id": "VOLKSWAGEN_TIRE_RR_SPD",       "path": "Movement", "fmt": { "len": 16, "max": 1000,  "div": 10,  "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
+  ]},
+{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "028C"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_HVBAT_SOC",           "path": "Battery", "fmt": {           "len": 8,  "max": 100,                      "mul": 100, "div": 255,                                   "unit": "percent"       }, "name": "HV battery charge",                            "suggestedMetric": "stateOfCharge"},
+    {"id": "VOLKSWAGEN_HVBAT_TOT_AH_CHRG",   "path": "Battery", "fmt": {           "len": 32, "max": 7818700,                              "div": 549.31642,                             "unit": "ampereHours"   }, "name": "HV battery total ampere hours of charge"},
+    {"id": "VOLKSWAGEN_HVBAT_VOLTS",         "path": "Battery", "fmt": {           "len": 16, "max": 1000,                                 "div": 4,                                     "unit": "volts"         }, "name": "HV battery voltage"},
+    {"id": "VOLKSWAGEN_HVBAT_CURRENT",       "path": "Battery", "fmt": {           "len": 16, "max": 200,     "min": -200,                 "div": 4,          "add": -511,               "unit": "amps"          }, "name": "HV battery current"},
+    {"id": "VOLKSWAGEN_HVBAT_TOT_AH_DCHRG",  "path": "Battery", "fmt": {"bix": 32, "len": 32, "max": 3909350, "min": -3909350,             "div": 549.31642,               "sign": true, "unit": "ampereHours"   }, "name": "HV battery total ampere hours of discharge"},
+    {"id": "VOLKSWAGEN_HVBAT_TOT_KWH_CHRG",  "path": "Battery", "fmt": {"bix": 64, "len": 32, "max": 500300,                               "div": 8583.07212,                            "unit": "kilowattHours" }, "name": "HV battery total kilowatt hours of charge"},
+    {"id": "VOLKSWAGEN_HVBAT_TOT_KWH_DCHRG", "path": "Battery", "fmt": {"bix": 96, "len": 32, "max": 250300,  "min": -250300,              "div": 8583.07212,              "sign": true, "unit": "kilowattHours" }, "name": "HV battery total kilowatt hours of discharge"}
+  ]}
 ]
 }
