@@ -208,10 +208,6 @@
     {"id": "VOLKSWAGEN_ODO",   "path": "Trips", "fmt": { "len": 24, "max": 16777215,   "unit": "kilometers" }, "name": "Odometer",               "suggestedMetric": "odometer"},
     {"id": "VOLKSWAGEN_ODO_2", "path": "Trips", "fmt": { "len": 32, "max": 4294967295, "unit": "kilometers" }, "name": "Odometer (alternative)", "suggestedMetric": "odometer"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"01": "2F"}, "freq": 5,
-  "signals": [
-    {"id": "VOLKSWAGEN_RANGE", "path": "Fuel.Generic", "fmt": { "len": 8, "max": 1000, "mul": 1000, "div": 255, "nullmin": 0, "unit": "kilometers" }, "name": "Range remaining", "suggestedMetric": "fuelRange"}
-  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "028D"}, "freq": 1,
   "signals": [
     {"id": "VOLKSWAGEN_ECU_TEMP", "path": "Engine", "fmt": { "len": 16, "max": 500, "min": -500, "div": 10, "sign": true, "unit": "celsius" }, "name": "ECU temperature"}
