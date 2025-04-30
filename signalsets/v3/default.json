@@ -49,9 +49,34 @@
   ]},
 { "hdr": "710", "dbg": true, "cmd": {"22": "2A0A"}, "freq": 30,
   "signals": [
-    {"id": "VOLKSWAGEN_ODO_2", "path": "Trips", "fmt": { "len": 32, "max": 255, "unit": "kilometers" }, "name": "Odometer (alternative)", "suggestedMetric": "odometer"},
-    {"id": "VOLKSWAGEN_ODO",   "path": "Trips", "fmt": { "len": 32, "max": 255, "unit": "kilometers" }, "name": "Odometer",               "suggestedMetric": "odometer"},
-    {"id": "VOLKSWAGEN_ODO_3", "path": "Trips", "fmt": { "len": 32, "max": 255, "unit": "kilometers" }, "name": "Odometer",               "suggestedMetric": "odometer"}
+    {"id": "VOLKSWAGEN_ODO_2",        "path": "Trips",   "fmt": { "len": 32, "max": 255,                         "unit": "kilometers" }, "name": "Odometer (alternative)",                "suggestedMetric": "odometer"},
+    {"id": "VOLKSWAGEN_ODO",          "path": "Trips",   "fmt": { "len": 32, "max": 255,                         "unit": "kilometers" }, "name": "Odometer",                              "suggestedMetric": "odometer"},
+    {"id": "VOLKSWAGEN_SSB_SENSOR_T", "path": "Battery", "fmt": { "len": 8,  "max": 215, "min": -40, "add": -40, "unit": "celsius"    }, "name": "Start/stop battery sensor temperature"},
+    {"id": "VOLKSWAGEN_ODO_3",        "path": "Trips",   "fmt": { "len": 32, "max": 255,                         "unit": "kilometers" }, "name": "Odometer",                              "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "710", "rax": "77A", "dbg": true, "cmd": {"22": "2A07"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_SSB_V", "path": "Battery", "fmt": { "len": 16, "max": 69.54, "min": 4, "div": 100, "add": 4, "unit": "volts" }, "name": "Start/stop battery voltage"}
+  ]},
+{ "hdr": "710", "rax": "77A", "dbg": true, "cmd": {"22": "2A0B"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_SSB_T", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Start/stop battery sensor temperature"}
+  ]},
+{ "hdr": "710", "rax": "77A", "dbg": true, "cmd": {"22": "2A0C"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_SSB_SOC", "path": "Battery", "fmt": { "len": 8, "max": 100, "unit": "percent" }, "name": "Start/stop battery state of charge", "suggestedMetric": "stateOfCharge"}
+  ]},
+{ "hdr": "710", "rax": "77A", "dbg": true, "cmd": {"22": "2A0E"}, "freq": 5,
+  "signals": [
+    {"id": "VOLKSWAGEN_SSB_R", "path": "Battery", "fmt": { "len": 8, "max": 100, "mul": 2, "div": 10, "unit": "milliohms" }, "name": "Start/stop battery resistance"}
+  ]},
+{ "hdr": "710", "rax": "77A", "dbg": true, "cmd": {"22": "2A0F"}, "freq": 5,
+  "signals": [
+    {"id": "VOLKSWAGEN_SSB_AH", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "ampereHours" }, "name": "Start/stop battery charge"}
+  ]},
+{ "hdr": "710", "rax": "77A", "dbg": true, "cmd": {"22": "2A10"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_SSB_V_REST", "path": "Battery", "fmt": { "len": 8, "max": 63, "min": 9, "mul": 54, "div": 255, "add": 9, "unit": "volts" }, "name": "Start/stop battery voltage (at rest)"}
   ]},
 { "hdr": "710", "rax": "77A", "fcm1": true, "dbg": true, "cmd": {"22": "2AB2"}, "freq": 86400,
   "signals": [
@@ -224,6 +249,14 @@
   "signals": [
     {"id": "VOLKSWAGEN_HVBAT_SOC_DISP", "path": "Battery", "fmt": { "len": 16, "max": 100, "div": 100, "unit": "percent" }, "name": "HV battery charge (displayed)", "suggestedMetric": "stateOfCharge"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11BD"}, "freq": 15,
+  "signals": [
+    {"id": "VOLKSWAGEN_OIL_LEVEL_WARN", "path": "Fluids", "fmt": { "len": 16, "max": 26.2, "div": 2500, "unit": "centimeters" }, "name": "Oil level warning threshold"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11BE"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_EOT", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Engine oil temperature", "description": "Scaling is unknown, needs further validation."}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2005"}, "freq": 0.25,
   "signals": [
     {"id": "VOLKSWAGEN_BRAKE_BST_P", "path": "Brakes", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "bars" }, "name": "Brake booster pressure"}
@@ -320,9 +353,15 @@
   "signals": [
     {"id": "VOLKSWAGEN_TIRE_RL_SPD", "path": "Movement", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
   ]},
-{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "210F"}, "freq": 2,
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "210F"}, "freq": 1,
   "signals": [
     {"id": "VOLKSWAGEN_GEAR_v2", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear"},
+    {"id": "VOLKSWAGEN_GEAR_SHFT", "path": "Transmission", "name": "Shift gear", "fmt": {"len": 8, "map": {
+          "1": { "description": "Reverse", "value": "REVERSE" },
+          "2": { "description": "Park",    "value": "PARK" },
+          "3": { "description": "Drive",   "value": "DRIVE" }
+        }}
+    },
     {"id": "VOLKSWAGEN_GEAR", "path": "Transmission", "name": "Current gear", "description": "The automatic transmission gear.", "fmt": {"len": 8, "map": {
           "1": { "description": "First gear",   "value": "1" },
           "2": { "description": "Second gear",  "value": "2" },
