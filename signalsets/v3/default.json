@@ -876,6 +876,10 @@
 { "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "5200"}, "freq": 3600,
   "signals": [
     {"id": "VOLKSWAGEN_LAUNCH", "path": "Stats", "fmt": { "len": 32, "max": 1000000, "unit": "scalar" }, "name": "Launch control count", "description": "How many times you've initiated launch control on the car."}
+  ]},
+{ "hdr": "FC00", "dbg": true, "cmd": {"22": "028C"}, "freq": 0.25,
+  "signals": [
+    {"id": "VOLKSWAGEN_SOC", "path": "Battery", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 250, "unit": "percent" }, "name": "State of charge", "suggestedMetric": "stateOfCharge"}
   ]}
 ]
 }
