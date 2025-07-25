@@ -68,9 +68,17 @@
     {"id": "VOLKSWAGEN_ODO_2",        "path": "Trips",   "fmt": { "len": 32, "max": 255,                         "unit": "kilometers" }, "name": "Odometer (alternative)",                "suggestedMetric": "odometer"},
     {"id": "VOLKSWAGEN_SSB_SENSOR_T", "path": "Battery", "fmt": { "len": 8,  "max": 215, "min": -40, "add": -40, "unit": "celsius"    }, "name": "Start/stop battery sensor temperature"}
   ]},
+{ "hdr": "710", "rax": "77A", "fcm1": true, "dbg": true, "cmd": {"22": "2A00"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_SSB_VT", "path": "Battery", "fmt": { "len": 8, "max": 36.1, "div": 10, "add": 10.6, "unit": "volts" }, "name": "Start/stop battery target voltage"}
+  ]},
 { "hdr": "710", "rax": "77A", "dbg": true, "cmd": {"22": "2A07"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_SSB_V", "path": "Battery", "fmt": { "len": 16, "max": 69.54, "min": 4, "div": 100, "add": 4, "unit": "volts" }, "name": "Start/stop battery voltage"}
+    {"id": "VOLKSWAGEN_SSB_V", "path": "Battery", "fmt": { "len": 16, "max": 69.535, "min": 4, "div": 1000, "add": 4, "unit": "volts" }, "name": "Start/stop battery voltage"}
+  ]},
+{ "hdr": "710", "rax": "77A", "dbg": true, "cmd": {"22": "2A09"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_SSB_C", "path": "Battery", "fmt": { "len": 32, "max": 100, "div": 1000, "sign": true, "unit": "amps" }, "name": "Start/stop battery current"}
   ]},
 { "hdr": "710", "rax": "77A", "dbg": true, "cmd": {"22": "2A0B"}, "freq": 1,
   "signals": [
@@ -91,6 +99,11 @@
 { "hdr": "710", "rax": "77A", "dbg": true, "cmd": {"22": "2A10"}, "freq": 1,
   "signals": [
     {"id": "VOLKSWAGEN_SSB_V_REST", "path": "Battery", "fmt": { "len": 8, "max": 63, "min": 9, "mul": 54, "div": 255, "add": 9, "unit": "volts" }, "name": "Start/stop battery voltage (at rest)"}
+  ]},
+{ "hdr": "710", "rax": "77A", "fcm1": true, "dbg": true, "cmd": {"22": "2A61"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_SSB_TOTAL_CHARGE",    "path": "Battery", "fmt": {           "len": 32, "max": 100, "div": 10, "unit": "ampereHours" }, "name": "Start/stop battery total charge"},
+    {"id": "VOLKSWAGEN_SSB_TOTAL_DISCHARGE", "path": "Battery", "fmt": {"bix": 32, "len": 32, "max": 100, "div": 10, "unit": "ampereHours" }, "name": "Start/stop battery total discharge"}
   ]},
 { "hdr": "710", "rax": "77A", "fcm1": true, "dbg": true, "cmd": {"22": "2AB2"}, "freq": 86400,
   "signals": [
@@ -163,10 +176,6 @@
   "signals": [
     {"id": "VOLKSWAGEN_STEER_ANGLE", "path": "Control", "fmt": { "len": 16, "max": 32.767, "min": -32.768, "div": 1000, "sign": true, "unit": "radians" }, "name": "Steering wheel angle", "description": "Positive is rotated to the left, negative is rotated to the right."}
   ]},
-{ "hdr": "714", "tmo": "96", "fcm1": true, "dbg": true, "cmd": {"22": "1014"}, "freq": 1,
-  "signals": [
-    {"id": "VOLKSWAGEN_AAT", "path": "Climate", "fmt": { "len": 8, "max": 215, "min": -50, "add": -50, "unit": "celsius" }, "name": "Ambient air temperature"}
-  ]},
 { "hdr": "714", "dbg": true, "cmd": {"22": "202F"}, "freq": 30,
   "signals": [
     {"id": "VOLKSWAGEN_EOT", "path": "Engine", "fmt": { "len": 8, "max": 255, "add": -58, "unit": "scalar" }, "name": "Engine oil temperature"}
@@ -196,31 +205,38 @@
   "signals": [
     {"id": "VOLKSWAGEN_TRIP_USE_SHORT", "path": "Trips", "fmt": {"bix": 238, "len": 18, "max": 131, "min": -131, "div": 1000, "sign": true, "unit": "kilowattHours" }, "name": "Trip consumption (short)"}
   ]},
+{ "hdr": "714", "rax": "77E", "fcm1": true, "dbg": true, "cmd": {"22": "1014"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_AAT", "path": "Climate", "fmt": { "len": 8, "max": 77.5, "min": -50, "mul": 0.5, "add": -50, "unit": "celsius" }, "name": "Ambient air temperature"}
+  ]},
 { "hdr": "714", "rax": "77E", "dbg": true, "cmd": {"22": "22E0"}, "freq": 1,
   "signals": [
     {"id": "VOLKSWAGEN_RANGE_DSP", "path": "Trips", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Range remaining (displayed)", "suggestedMetric": "electricRange"}
   ]},
 { "hdr": "715", "dbg": true, "cmd": {"22": "2353"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_CRSH_FRONT",      "path": "Trips", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Crashes, front"},
-    {"id": "VOLKSWAGEN_CRASH_CNT_FRONT", "path": "Stats", "fmt": { "len": 8, "max": 100, "unit": "scalar" }, "name": "Crashes, front"}
+    {"id": "VOLKSWAGEN_CRSH_FRONT",  "path": "Trips", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Crashes, front"},
+    {"id": "VOLKSWAGEN_CRASH_FRONT", "path": "Stats", "fmt": { "len": 8, "max": 100, "unit": "scalar" }, "name": "Crashes, front"}
   ]},
 { "hdr": "715", "dbg": true, "cmd": {"22": "2354"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_CRASH_CNT_DRVR", "path": "Stats", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Crashes, driver side"}
+    {"id": "VOLKSWAGEN_CRASH_CNT_DRVR", "path": "Stats", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Crashes, driver side"},
+    {"id": "VOLKSWAGEN_CRASH_DRVR",     "path": "Stats", "fmt": { "len": 8, "max": 100, "unit": "scalar" }, "name": "Crashes, driver side"}
   ]},
 { "hdr": "715", "dbg": true, "cmd": {"22": "2355"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_CRASH_CNT_PSNGR", "path": "Stats", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Crashes, passenger side"}
+    {"id": "VOLKSWAGEN_CRASH_CNT_PSNGR", "path": "Stats", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Crashes, passenger side"},
+    {"id": "VOLKSWAGEN_CRASH_PASS",      "path": "Stats", "fmt": { "len": 8, "max": 100, "unit": "scalar" }, "name": "Crashes, passenger side"}
   ]},
 { "hdr": "715", "dbg": true, "cmd": {"22": "2356"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_CRASH_CNT_REAR", "path": "Stats", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Crashes, rear"}
+    {"id": "VOLKSWAGEN_CRASH_CNT_REAR", "path": "Stats", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Crashes, rear"},
+    {"id": "VOLKSWAGEN_CRASH_REAR",     "path": "Stats", "fmt": { "len": 8, "max": 100, "unit": "scalar" }, "name": "Crashes, rear"}
   ]},
 { "hdr": "715", "dbg": true, "cmd": {"22": "2357"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_CRASH_CNT_ROLL",     "path": "Stats", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Crashes, rollover"},
-    {"id": "VOLKSWAGEN_CRASH_CNT_ROLLOVER", "path": "Stats", "fmt": { "len": 8, "max": 100, "unit": "scalar" }, "name": "Crashes, rollover"}
+    {"id": "VOLKSWAGEN_CRASH_CNT_ROLL", "path": "Stats", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Crashes, rollover"},
+    {"id": "VOLKSWAGEN_ROLLOVER",       "path": "Stats", "fmt": { "len": 8, "max": 100, "unit": "scalar" }, "name": "Rollovers"}
   ]},
 { "hdr": "744", "rax": "7AE", "fcm1": true, "dbg": true, "cmd": {"22": "4965"}, "freq": 1,
   "signals": [
@@ -230,23 +246,18 @@
   "signals": [
     {"id": "VOLKSWAGEN_WNDSHLD_TEMP", "path": "Climate", "fmt": { "len": 8, "max": 108.08, "min": -38.8, "mul": 0.576, "add": -38.8, "unit": "celsius" }, "name": "Windshield temperature"}
   ]},
-{ "hdr": "7E0", "dbg": true, "cmd": {"22": "10E0"}, "freq": 30,
+{ "hdr": "746", "rax": "7B0", "fcm1": true, "dbg": true, "cmd": {"22": "26ED"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_ODO_V3",   "path": "Trips", "fmt": { "len": 32, "max": 4000000000, "unit": "kilometers" }, "name": "Odometer",               "suggestedMetric": "odometer"},
-    {"id": "VOLKSWAGEN_ODO_2_V3", "path": "Trips", "fmt": { "len": 32, "max": 4294967295, "unit": "kilometers" }, "name": "Odometer (alternative)", "suggestedMetric": "odometer"}
+    {"id": "VOLKSWAGEN_AIR_POLUTION", "path": "Climate", "fmt": { "len": 8, "max": 12.7, "min": -12.7, "div": 10, "sign": true, "unit": "scalar" }, "name": "Air pollution level", "description": "0 means clean air."}
   ]},
-{ "hdr": "7E0", "dbg": true, "cmd": {"22": "1160"}, "freq": 30,
+{ "hdr": "767", "rax": "7D1", "fcm1": true, "dbg": true, "cmd": {"22": "2431"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_ODO_2_V4", "path": "Trips", "fmt": { "len": 32, "max": 4000000000, "unit": "kilometers" }, "name": "Odometer (alt)",             "suggestedMetric": "odometer"},
-    {"id": "VOLKSWAGEN_ODO_HD",   "path": "Trips", "fmt": { "len": 32, "max": 4294967295, "unit": "meters"     }, "name": "Odometer (high resolution)", "suggestedMetric": "odometer"}
+    {"id": "VOLKSWAGEN_GPS_SATS_VISIBLE", "path": "GPS", "fmt": {          "len": 8, "max": 255, "unit": "scalar" }, "name": "Satellites, visible"},
+    {"id": "VOLKSWAGEN_GPS_SATS_TRACKED", "path": "GPS", "fmt": {"bix": 8, "len": 8, "max": 255, "unit": "scalar" }, "name": "Satellites, tracked"}
   ]},
 { "hdr": "7E0", "dbg": true, "cmd": {"22": "11BA"}, "freq": 15,
   "signals": [
     {"id": "VOLKSWAGEN_OIL_LEVEL", "path": "Engine", "fmt": { "len": 16, "max": 262, "div": 250, "unit": "unknown" }, "name": "Oil level"}
-  ]},
-{ "hdr": "7E0", "dbg": true, "cmd": {"22": "11BB"}, "freq": 30,
-  "signals": [
-    {"id": "VOLKSWAGEN_OIL_CRIT", "path": "Fluids", "fmt": { "len": 16, "max": 26.2, "div": 2500, "unit": "centimeters" }, "name": "Oil level (critical)"}
   ]},
 { "hdr": "7E0", "dbg": true, "cmd": {"22": "11C4"}, "freq": 30,
   "signals": [
@@ -269,9 +280,18 @@
   "signals": [
     {"id": "VOLKSWAGEN_HVBAT_SOC_DISP_V2", "path": "Battery", "fmt": { "len": 16, "max": 100, "div": 100, "unit": "percent" }, "name": "HV battery charge (displayed)", "suggestedMetric": "stateOfCharge", "description": "HV battery charge displayed on the dashboard"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1002"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_AC_COMP_T", "path": "Climate", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "A/C compressor torque, requested"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1004"}, "freq": 5,
   "signals": [
     {"id": "VOLKSWAGEN_AAT_V2", "path": "Climate", "fmt": { "len": 16, "max": 255, "min": -255, "div": 128, "sign": true, "unit": "celsius" }, "name": "Ambient temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10E0"}, "freq": 5,
+  "signals": [
+    {"id": "VOLKSWAGEN_ODO_V3",   "path": "Trips", "fmt": { "len": 32, "max": 4000000000, "unit": "kilometers" }, "name": "Odometer",               "suggestedMetric": "odometer"},
+    {"id": "VOLKSWAGEN_ODO_2_V3", "path": "Trips", "fmt": { "len": 32, "max": 4294967295, "unit": "kilometers" }, "name": "Odometer (alternative)", "suggestedMetric": "odometer"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1151"}, "freq": 0.25,
   "signals": [
@@ -309,11 +329,19 @@
   "signals": [
     {"id": "VOLKSWAGEN_VSS_DIR", "path": "Movement", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "sign": true, "unit": "kilometersPerHour" }, "name": "Vehicle speed (directional)"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1160"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_ODO_HD", "path": "Trips", "fmt": { "len": 32, "max": 4294967.2949999999, "div": 1000, "unit": "kilometers" }, "name": "Odometer (high resolution)", "suggestedMetric": "odometer"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1164"}, "freq": 1,
   "signals": [
     {"id": "VOLKSWAGEN_HVBAT_SOC_DISP", "path": "Battery", "fmt": { "len": 16, "max": 100, "div": 100, "unit": "percent" }, "name": "HV battery charge (displayed)", "suggestedMetric": "stateOfCharge"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11BD"}, "freq": 15,
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11BB"}, "freq": 3600,
+  "signals": [
+    {"id": "VOLKSWAGEN_OIL_CRIT", "path": "Fluids", "fmt": { "len": 16, "max": 26.2, "div": 2500, "unit": "centimeters" }, "name": "Oil level (critical)"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11BD"}, "freq": 3600,
   "signals": [
     {"id": "VOLKSWAGEN_OIL_LEVEL_WARN", "path": "Fluids", "fmt": { "len": 16, "max": 26.2, "div": 2500, "unit": "centimeters" }, "name": "Oil level warning threshold"}
   ]},
@@ -343,19 +371,19 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "F421"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_MIL_DIST", "path": "DTCs", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Distance traveled while MIL was activated"}
+    {"id": "VOLKSWAGEN_MIL_DIST", "path": "DTCs", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Distance traveled while mil was activated"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "F430"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_WARM_UPS", "path": "DTCs", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Number of warm-ups since DTCs cleared"}
+    {"id": "VOLKSWAGEN_WARM_UPS", "path": "DTCs", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Number of warm-ups since diagnostic trouble codes cleared"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "F431"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_CLR_DIST", "path": "DTCs", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Distance traveled since DTCs cleared"}
+    {"id": "VOLKSWAGEN_CLR_DIST", "path": "DTCs", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Distance traveled since diagnostic trouble codes cleared", "suggestedMetric": "distanceSinceDTCsCleared"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "F442"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_VPWR", "path": "Battery", "fmt": { "len": 16, "max": 65, "div": 1000, "unit": "volts" }, "name": "Control module voltage"}
+    {"id": "VOLKSWAGEN_VPWR", "path": "Battery", "fmt": { "len": 16, "max": 65, "div": 1000, "unit": "volts" }, "name": "Control module voltage", "suggestedMetric": "starterBatteryVoltage"}
   ]},
 { "hdr": "7E1", "dbg": true, "cmd": {"22": "0302"}, "freq": 900,
   "signals": [
@@ -424,9 +452,23 @@
   "signals": [
     {"id": "VOLKSWAGEN_TIRE_RL_SPD_V2", "path": "Movement", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
   ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "2104"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_ATF_T", "path": "Fluids", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Automatic transmission fluid temperature"}
+  ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "210F"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_GEAR", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear"},
+    {"id": "VOLKSWAGEN_GEAR", "path": "Transmission", "name": "Current gear", "description": "The automatic transmission gear.", "fmt": {"len": 8, "map": {
+          "1": { "description": "First gear",   "value": "1" },
+          "2": { "description": "Second gear",  "value": "2" },
+          "3": { "description": "Third gear",   "value": "3" },
+          "4": { "description": "Fourth gear",  "value": "4" },
+          "5": { "description": "Fifth gear",   "value": "5" },
+          "6": { "description": "Sixth gear",   "value": "6" },
+          "7": { "description": "Seventh gear", "value": "7" },
+          "8": { "description": "Eighth gear",  "value": "8" }
+        }}
+    },
     {"id": "VOLKSWAGEN_GEAR_SHFT", "path": "Transmission", "name": "Shift gear", "fmt": {"len": 8, "map": {
           "1": { "description": "Reverse", "value": "REVERSE" },
           "2": { "description": "Park",    "value": "PARK" },
