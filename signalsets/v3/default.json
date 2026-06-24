@@ -1,13 +1,15 @@
 { "commands": [
 { "hdr": "70B", "fcm1": true, "dbg": true, "cmd": {"22": "18A0"}, "freq": 30,
   "signals": [
-    {"id": "VOLKSWAGEN_TID_1", "path": "Tires", "fmt": {           "len": 32, "max": 100,                                         "unit": "scalar"  }, "name": "Tire 1 sensor id"},
-    {"id": "VOLKSWAGEN_TP_FR", "path": "Tires", "fmt": {"bix": 40, "len": 8,  "max": 6.375, "div": 40,                            "unit": "bars"    }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"},
-    {"id": "VOLKSWAGEN_TP_1",  "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25, "unit": "bars"    }, "name": "Tire 1 current pressure",   "suggestedMetric": "frontLeftTirePressure"},
-    {"id": "VOLKSWAGEN_TT_1",  "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40,                "unit": "celsius" }, "name": "Tire 1 temperature"},
-    {"id": "VOLKSWAGEN_TPS_1", "path": "Tires", "fmt": {"bix": 64, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Tire 1 specified pressure"},
-    {"id": "VOLKSWAGEN_TPW_1", "path": "Tires", "fmt": {"bix": 72, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Tire 1 warning pressure"},
-    {"id": "VOLKSWAGEN_TPOS_1", "path": "Tires", "name": "Tire 1 position", "fmt": {"bix": 32, "len": 8, "map": {
+    {"id": "VOLKSWAGEN_TID_RL", "path": "Tires", "fmt": {           "len": 32, "max": 100,                                         "unit": "scalar"  }, "name": "Rear left tire sensor id"},
+    {"id": "VOLKSWAGEN_TP_FR",  "path": "Tires", "fmt": {"bix": 40, "len": 8,  "max": 6.375, "div": 40,                            "unit": "bars"    }, "name": "Front right tire pressure",         "suggestedMetric": "frontRightTirePressure"},
+    {"id": "VOLKSWAGEN_TP_RL",  "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25, "unit": "bars"    }, "name": "Rear left tire current pressure",   "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "VOLKSWAGEN_TP_1",   "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25, "unit": "bars"    }, "name": "Tire 1 current pressure",           "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "VOLKSWAGEN_TT_RL",  "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40,                "unit": "celsius" }, "name": "Rear left tire temperature",        "suggestedMetric": "rearLeftTireTemperature"},
+    {"id": "VOLKSWAGEN_TT_1",   "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40,                "unit": "celsius" }, "name": "Tire 1 temperature"},
+    {"id": "VOLKSWAGEN_TPS_RL", "path": "Tires", "fmt": {"bix": 64, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Rear left tire specified pressure"},
+    {"id": "VOLKSWAGEN_TPW_RL", "path": "Tires", "fmt": {"bix": 72, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Rear left tire warning pressure"},
+    {"id": "VOLKSWAGEN_TPOS_RL", "path": "Tires", "name": "Tire 1 position", "fmt": {"bix": 32, "len": 8, "map": {
           "0": { "description": "Front left",  "value": "FL" },
           "1": { "description": "Front right", "value": "FR" },
           "2": { "description": "Rear left",   "value": "RL" },
@@ -17,13 +19,15 @@
   ]},
 { "hdr": "70B", "fcm1": true, "dbg": true, "cmd": {"22": "18A1"}, "freq": 30,
   "signals": [
-    {"id": "VOLKSWAGEN_TID_2", "path": "Tires", "fmt": {           "len": 32, "max": 100,                                         "unit": "scalar"  }, "name": "Tire 2 sensor id"},
-    {"id": "VOLKSWAGEN_TP_FL", "path": "Tires", "fmt": {"bix": 40, "len": 8,  "max": 6.375, "div": 40,                            "unit": "bars"    }, "name": "Front left tire pressure",  "suggestedMetric": "frontLeftTirePressure"},
-    {"id": "VOLKSWAGEN_TP_2",  "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25, "unit": "bars"    }, "name": "Tire 2 current pressure",   "suggestedMetric": "frontRightTirePressure"},
-    {"id": "VOLKSWAGEN_TT_2",  "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40,                "unit": "celsius" }, "name": "Tire 2 temperature"},
-    {"id": "VOLKSWAGEN_TPS_2", "path": "Tires", "fmt": {"bix": 64, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Tire 2 specified pressure"},
-    {"id": "VOLKSWAGEN_TPW_2", "path": "Tires", "fmt": {"bix": 72, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Tire 2 warning pressure"},
-    {"id": "VOLKSWAGEN_TPOS_2", "path": "Tires", "name": "Tire 1 position", "fmt": {"bix": 32, "len": 8, "map": {
+    {"id": "VOLKSWAGEN_TID_FR",   "path": "Tires", "fmt": {           "len": 32, "max": 100,                                         "unit": "scalar"  }, "name": "Front right tire sensor id"},
+    {"id": "VOLKSWAGEN_TP_FL",    "path": "Tires", "fmt": {"bix": 40, "len": 8,  "max": 6.375, "div": 40,                            "unit": "bars"    }, "name": "Front left tire pressure",            "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "VOLKSWAGEN_TP_FR_V2", "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25, "unit": "bars"    }, "name": "Front right tire current pressure",   "suggestedMetric": "frontRightTirePressure"},
+    {"id": "VOLKSWAGEN_TP_2",     "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Tire #2 pressure"},
+    {"id": "VOLKSWAGEN_TT_FR",    "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40,                "unit": "celsius" }, "name": "Front right tire temperature",        "suggestedMetric": "frontRightTireTemperature"},
+    {"id": "VOLKSWAGEN_TT_2",     "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40,                "unit": "celsius" }, "name": "Tire 2 temperature"},
+    {"id": "VOLKSWAGEN_TPS_FR",   "path": "Tires", "fmt": {"bix": 64, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Front right tire specified pressure"},
+    {"id": "VOLKSWAGEN_TPW_FR",   "path": "Tires", "fmt": {"bix": 72, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Front right tire warning pressure"},
+    {"id": "VOLKSWAGEN_TPOS_FR", "path": "Tires", "name": "Tire 2 position", "fmt": {"bix": 32, "len": 8, "map": {
           "0": { "description": "Front left",  "value": "FL" },
           "1": { "description": "Front right", "value": "FR" },
           "2": { "description": "Rear left",   "value": "RL" },
@@ -33,13 +37,15 @@
   ]},
 { "hdr": "70B", "fcm1": true, "dbg": true, "cmd": {"22": "18A2"}, "freq": 30,
   "signals": [
-    {"id": "VOLKSWAGEN_TID_3", "path": "Tires", "fmt": {           "len": 32, "max": 100,                                         "unit": "scalar"  }, "name": "Tire 3 sensor id"},
-    {"id": "VOLKSWAGEN_TP_RL", "path": "Tires", "fmt": {"bix": 40, "len": 8,  "max": 6.375, "div": 40,                            "unit": "bars"    }, "name": "Rear left tire pressure",   "suggestedMetric": "rearLeftTirePressure"},
-    {"id": "VOLKSWAGEN_TP_3",  "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25, "unit": "bars"    }, "name": "Tire 3 current pressure",   "suggestedMetric": "rearLeftTirePressure"},
-    {"id": "VOLKSWAGEN_TT_3",  "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40,                "unit": "celsius" }, "name": "Tire 3 temperature"},
-    {"id": "VOLKSWAGEN_TPS_3", "path": "Tires", "fmt": {"bix": 64, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Tire 3 specified pressure"},
-    {"id": "VOLKSWAGEN_TPW_3", "path": "Tires", "fmt": {"bix": 72, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Tire 3 warning pressure"},
-    {"id": "VOLKSWAGEN_TPOS_3", "path": "Tires", "name": "Tire 1 position", "fmt": {"bix": 32, "len": 8, "map": {
+    {"id": "VOLKSWAGEN_TID_RR",   "path": "Tires", "fmt": {           "len": 32, "max": 100,                                         "unit": "scalar"  }, "name": "Rear right tire sensor id"},
+    {"id": "VOLKSWAGEN_TP_RL_V2", "path": "Tires", "fmt": {"bix": 40, "len": 8,  "max": 6.375, "div": 40,                            "unit": "bars"    }, "name": "Rear left tire pressure",            "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "VOLKSWAGEN_TP_RR",    "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25, "unit": "bars"    }, "name": "Rear right tire current pressure",   "suggestedMetric": "rearRightTirePressure"},
+    {"id": "VOLKSWAGEN_TP_3",     "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25, "unit": "bars"    }, "name": "Tire 3 current pressure",            "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "VOLKSWAGEN_TT_RR",    "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40,                "unit": "celsius" }, "name": "Rear right tire temperature",        "suggestedMetric": "rearRightTireTemperature"},
+    {"id": "VOLKSWAGEN_TT_3",     "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40,                "unit": "celsius" }, "name": "Tire 3 temperature"},
+    {"id": "VOLKSWAGEN_TPS_RR",   "path": "Tires", "fmt": {"bix": 64, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Rear right tire specified pressure"},
+    {"id": "VOLKSWAGEN_TPW_RR",   "path": "Tires", "fmt": {"bix": 72, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Rear right tire warning pressure"},
+    {"id": "VOLKSWAGEN_TPOS_RR", "path": "Tires", "name": "Tire 3 position", "fmt": {"bix": 32, "len": 8, "map": {
           "0": { "description": "Front left",  "value": "FL" },
           "1": { "description": "Front right", "value": "FR" },
           "2": { "description": "Rear left",   "value": "RL" },
@@ -49,13 +55,15 @@
   ]},
 { "hdr": "70B", "fcm1": true, "dbg": true, "cmd": {"22": "18A3"}, "freq": 30,
   "signals": [
-    {"id": "VOLKSWAGEN_TID_4", "path": "Tires", "fmt": {           "len": 32, "max": 100,                                         "unit": "scalar"  }, "name": "Tire 4 sensor id"},
-    {"id": "VOLKSWAGEN_TP_RR", "path": "Tires", "fmt": {"bix": 40, "len": 8,  "max": 6.375, "div": 40,                            "unit": "bars"    }, "name": "Rear right tire pressure",  "suggestedMetric": "rearRightTirePressure"},
-    {"id": "VOLKSWAGEN_TP_4",  "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25, "unit": "bars"    }, "name": "Tire 4 current pressure",   "suggestedMetric": "rearRightTirePressure"},
-    {"id": "VOLKSWAGEN_TT_4",  "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40,                "unit": "celsius" }, "name": "Tire 4 temperature"},
-    {"id": "VOLKSWAGEN_TPS_4", "path": "Tires", "fmt": {"bix": 64, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Tire 4 specified pressure"},
-    {"id": "VOLKSWAGEN_TPW_4", "path": "Tires", "fmt": {"bix": 72, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Tire 4 warning pressure"},
-    {"id": "VOLKSWAGEN_TPOS_4", "path": "Tires", "name": "Tire 1 position", "fmt": {"bix": 32, "len": 8, "map": {
+    {"id": "VOLKSWAGEN_TID_FL",   "path": "Tires", "fmt": {           "len": 32, "max": 100,                                         "unit": "scalar"  }, "name": "Front left tire sensor id"},
+    {"id": "VOLKSWAGEN_TP_RR_V2", "path": "Tires", "fmt": {"bix": 40, "len": 8,  "max": 6.375, "div": 40,                            "unit": "bars"    }, "name": "Rear right tire pressure",           "suggestedMetric": "rearRightTirePressure"},
+    {"id": "VOLKSWAGEN_TP_FL_V2", "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25, "unit": "bars"    }, "name": "Front left tire current pressure",   "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "VOLKSWAGEN_TP_4",     "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25, "unit": "bars"    }, "name": "Tire 4 current pressure",            "suggestedMetric": "rearRightTirePressure"},
+    {"id": "VOLKSWAGEN_TT_FL",    "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40,                "unit": "celsius" }, "name": "Front left tire temperature",        "suggestedMetric": "frontLeftTireTemperature"},
+    {"id": "VOLKSWAGEN_TT_4",     "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40,                "unit": "celsius" }, "name": "Tire 4 temperature"},
+    {"id": "VOLKSWAGEN_TPS_FL",   "path": "Tires", "fmt": {"bix": 64, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Front left tire specified pressure"},
+    {"id": "VOLKSWAGEN_TPW_FL",   "path": "Tires", "fmt": {"bix": 72, "len": 8,  "max": 25.5,  "div": 10,                            "unit": "bars"    }, "name": "Front left tire warning pressure"},
+    {"id": "VOLKSWAGEN_TPOS_FL", "path": "Tires", "name": "Tire 4 position", "fmt": {"bix": 32, "len": 8, "map": {
           "0": { "description": "Front left",  "value": "FL" },
           "1": { "description": "Front right", "value": "FR" },
           "2": { "description": "Rear left",   "value": "RL" },
@@ -324,21 +332,25 @@
     {"id": "VOLKSWAGEN_CNT_STEER_SUPPORT_ODO_RDG_OF_LAST_ACT", "path": "Trips",  "fmt": {"bix": 8,  "len": 24, "max": 1,              "unit": "kilometers"   }, "name": "Counter steer support, odometer, last activated"},
     {"id": "VOLKSWAGEN_CNT_STEER_SUPPORT_STEERING_TRQ",        "path": "Engine", "fmt": {"bix": 32, "len": 16, "max": 1, "div": 1000, "unit": "newtonMeters" }, "name": "Counter steer support, steering torque"}
   ]},
-{ "hdr": "713", "rax": "77D", "dbg": true, "cmd": {"22": "2B1B"}, "freq": 0.1,
+{ "hdr": "713", "rax": "77D", "dbg": true, "cmd": {"22": "2B1B"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_TIRE_FL_SPD_V3", "path": "Movement", "fmt": { "len": 16, "max": 1000, "mul": 9, "div": 160, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"}
+    {"id": "VOLKSWAGEN_TIRE_FL_SPD_713", "path": "Movement", "fmt": { "len": 16, "max": 1000,           "div": 10,  "unit": "kilometersPerHour" }, "name": "Front left wheel speed"},
+    {"id": "VOLKSWAGEN_TIRE_FL_SPD_V2",  "path": "Movement", "fmt": { "len": 16, "max": 1000, "mul": 9, "div": 160, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"}
   ]},
-{ "hdr": "713", "rax": "77D", "dbg": true, "cmd": {"22": "2B1C"}, "freq": 0.1,
+{ "hdr": "713", "rax": "77D", "dbg": true, "cmd": {"22": "2B1C"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_TIRE_FR_SPD_V3", "path": "Movement", "fmt": { "len": 16, "max": 1000, "mul": 9, "div": 160, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"}
+    {"id": "VOLKSWAGEN_TIRE_FR_SPD_713", "path": "Movement", "fmt": { "len": 16, "max": 1000,           "div": 10,  "unit": "kilometersPerHour" }, "name": "Front right wheel speed"},
+    {"id": "VOLKSWAGEN_TIRE_FR_SPD_V2",  "path": "Movement", "fmt": { "len": 16, "max": 1000, "mul": 9, "div": 160, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"}
   ]},
-{ "hdr": "713", "rax": "77D", "dbg": true, "cmd": {"22": "2B1D"}, "freq": 0.1,
+{ "hdr": "713", "rax": "77D", "dbg": true, "cmd": {"22": "2B1D"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_TIRE_RL_SPD_V3", "path": "Movement", "fmt": { "len": 16, "max": 1000, "mul": 9, "div": 160, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
+    {"id": "VOLKSWAGEN_TIRE_RL_SPD_713", "path": "Movement", "fmt": { "len": 16, "max": 1000,           "div": 10,  "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"},
+    {"id": "VOLKSWAGEN_TIRE_RL_SPD_V2",  "path": "Movement", "fmt": { "len": 16, "max": 1000, "mul": 9, "div": 160, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
   ]},
-{ "hdr": "713", "rax": "77D", "dbg": true, "cmd": {"22": "2B1E"}, "freq": 0.1,
+{ "hdr": "713", "rax": "77D", "dbg": true, "cmd": {"22": "2B1E"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_TIRE_RR_SPD_V3", "path": "Movement", "fmt": { "len": 16, "max": 1000, "mul": 9, "div": 160, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
+    {"id": "VOLKSWAGEN_TIRE_RR_SPD_713", "path": "Movement", "fmt": { "len": 16, "max": 1000,           "div": 10,  "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"},
+    {"id": "VOLKSWAGEN_TIRE_RR_SPD_V2",  "path": "Movement", "fmt": { "len": 16, "max": 1000, "mul": 9, "div": 160, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
   ]},
 { "hdr": "713", "rax": "77D", "dbg": true, "cmd": {"22": "2B29"}, "freq": 0.1,
   "signals": [
@@ -935,8 +947,8 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10E0"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_ODO_V4",   "path": "Trips", "fmt": { "len": 32, "max": 4000000000, "unit": "kilometers" }, "name": "Odometer",               "suggestedMetric": "odometer"},
-    {"id": "VOLKSWAGEN_ODO_2_V3", "path": "Trips", "fmt": { "len": 32, "max": 4294967295, "unit": "kilometers" }, "name": "Odometer (alternative)", "suggestedMetric": "odometer"}
+    {"id": "VOLKSWAGEN_ODO_V4",   "path": "Trips", "fmt": { "len": 32, "max": 4000000000, "unit": "kilometers" }, "name": "Odometer",              "suggestedMetric": "odometer"},
+    {"id": "VOLKSWAGEN_ODO_2_V3", "path": "Trips", "fmt": { "len": 32, "max": 4294967295, "unit": "kilometers" }, "name": "Odometer, alternative", "suggestedMetric": "odometer"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10E2"}, "freq": 1,
   "signals": [
@@ -1657,19 +1669,19 @@
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1001"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_TIRE_FR_SPD_V2", "path": "Movement", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"}
+    {"id": "VOLKSWAGEN_TIRE_FR_SPD_V3", "path": "Movement", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1002"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_TIRE_FL_SPD_V2", "path": "Movement", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"}
+    {"id": "VOLKSWAGEN_TIRE_FL_SPD_V3", "path": "Movement", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1003"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_TIRE_RR_SPD_V2", "path": "Movement", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
+    {"id": "VOLKSWAGEN_TIRE_RR_SPD_V3", "path": "Movement", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1004"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_TIRE_RL_SPD_V2", "path": "Movement", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
+    {"id": "VOLKSWAGEN_TIRE_RL_SPD_V3", "path": "Movement", "fmt": { "len": 16, "max": 255, "div": 10, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1009"}, "freq": 1,
   "signals": [
