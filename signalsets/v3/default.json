@@ -6,14 +6,16 @@
   "commands": [
 { "hdr": "70B", "fcm1": true, "dbg": true, "cmd": {"22": "18A0"}, "freq": 30,
   "signals": [
-    {"id": "VOLKSWAGEN_TID_RL", "path": "Tires", "fmt": {           "len": 32, "max": 100,                                          "unit": "scalar"  }, "name": "Rear left tire sensor id"},
-    {"id": "VOLKSWAGEN_TP_FR",  "path": "Tires", "fmt": {"bix": 40, "len": 8,  "max": 6.375, "div": 40,                             "unit": "bars"    }, "name": "Front right tire pressure",         "suggestedMetric": "frontRightTirePressure"},
-    {"id": "VOLKSWAGEN_TP_RL",  "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25,  "unit": "bars"    }, "name": "Rear left tire current pressure",   "suggestedMetric": "rearLeftTirePressure"},
-    {"id": "VOLKSWAGEN_TP_1",   "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25,  "unit": "bars"    }, "name": "Tire 1 current pressure",           "suggestedMetric": "frontLeftTirePressure"},
-    {"id": "VOLKSWAGEN_TT_RL",  "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40,                 "unit": "celsius" }, "name": "Rear left tire temperature",        "suggestedMetric": "rearLeftTireTemperature"},
-    {"id": "VOLKSWAGEN_TT_1",   "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40, "nullmax": 100, "unit": "celsius" }, "name": "Tire 1 temperature",                "suggestedMetric": "frontLeftTireTemperature"},
-    {"id": "VOLKSWAGEN_TPS_RL", "path": "Tires", "fmt": {"bix": 64, "len": 8,  "max": 25.5,  "div": 10,                             "unit": "bars"    }, "name": "Rear left tire specified pressure"},
-    {"id": "VOLKSWAGEN_TPW_RL", "path": "Tires", "fmt": {"bix": 72, "len": 8,  "max": 25.5,  "div": 10,                             "unit": "bars"    }, "name": "Rear left tire warning pressure"},
+    {"id": "VOLKSWAGEN_TID_RL",    "path": "Tires", "fmt": {           "len": 32, "max": 100,                                                      "unit": "scalar"  }, "name": "Rear left tire sensor id"},
+    {"id": "VOLKSWAGEN_TP_FR",     "path": "Tires", "fmt": {"bix": 40, "len": 8,  "max": 6.375,             "div": 40,                             "unit": "bars"    }, "name": "Front right tire pressure",            "suggestedMetric": "frontRightTirePressure"},
+    {"id": "VOLKSWAGEN_TP_RL",     "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,              "div": 10,             "nullmax": 25,  "unit": "bars"    }, "name": "Rear left tire current pressure",      "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "VOLKSWAGEN_TP_1",      "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,              "div": 10,             "nullmax": 25,  "unit": "bars"    }, "name": "Tire 1 current pressure",              "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "VOLKSWAGEN_TT_FR",     "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 127,   "min": -40,            "add": -40, "nullmax": 127, "unit": "celsius" }, "name": "Front right tire temperature",         "suggestedMetric": "frontRightTireTemperature"},
+    {"id": "VOLKSWAGEN_TT_RL",     "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,                          "add": -40,                 "unit": "celsius" }, "name": "Rear left tire temperature",           "suggestedMetric": "rearLeftTireTemperature"},
+    {"id": "VOLKSWAGEN_TT_1",      "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,                          "add": -40, "nullmax": 100, "unit": "celsius" }, "name": "Tire 1 temperature",                   "suggestedMetric": "frontLeftTireTemperature"},
+    {"id": "VOLKSWAGEN_TP_SET_FR", "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 6.375,             "div": 40,                             "unit": "bars"    }, "name": "Front right tire pressure, set point"},
+    {"id": "VOLKSWAGEN_TPS_RL",    "path": "Tires", "fmt": {"bix": 64, "len": 8,  "max": 25.5,              "div": 10,                             "unit": "bars"    }, "name": "Rear left tire specified pressure"},
+    {"id": "VOLKSWAGEN_TPW_RL",    "path": "Tires", "fmt": {"bix": 72, "len": 8,  "max": 25.5,              "div": 10,                             "unit": "bars"    }, "name": "Rear left tire warning pressure"},
     {"id": "VOLKSWAGEN_TPOS_RL", "path": "Tires", "name": "Tire 1 position", "fmt": {"bix": 32, "len": 8, "map": {
           "0": { "description": "Front left",  "value": "FL" },
           "1": { "description": "Front right", "value": "FR" },
@@ -24,14 +26,16 @@
   ]},
 { "hdr": "70B", "fcm1": true, "dbg": true, "cmd": {"22": "18A1"}, "freq": 30,
   "signals": [
-    {"id": "VOLKSWAGEN_TID_FR",   "path": "Tires", "fmt": {           "len": 32, "max": 100,                                          "unit": "scalar"  }, "name": "Front right tire sensor id"},
-    {"id": "VOLKSWAGEN_TP_FL",    "path": "Tires", "fmt": {"bix": 40, "len": 8,  "max": 6.375, "div": 40,                             "unit": "bars"    }, "name": "Front left tire pressure",            "suggestedMetric": "frontLeftTirePressure"},
-    {"id": "VOLKSWAGEN_TP_FR_V2", "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25,  "unit": "bars"    }, "name": "Front right tire current pressure",   "suggestedMetric": "frontRightTirePressure"},
-    {"id": "VOLKSWAGEN_TP_2",     "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,                             "unit": "bars"    }, "name": "Tire #2 pressure"},
-    {"id": "VOLKSWAGEN_TT_FR",    "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40,                 "unit": "celsius" }, "name": "Front right tire temperature",        "suggestedMetric": "frontRightTireTemperature"},
-    {"id": "VOLKSWAGEN_TT_2",     "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40, "nullmax": 100, "unit": "celsius" }, "name": "Tire 2 temperature",                  "suggestedMetric": "frontRightTireTemperature"},
-    {"id": "VOLKSWAGEN_TPS_FR",   "path": "Tires", "fmt": {"bix": 64, "len": 8,  "max": 25.5,  "div": 10,                             "unit": "bars"    }, "name": "Front right tire specified pressure"},
-    {"id": "VOLKSWAGEN_TPW_FR",   "path": "Tires", "fmt": {"bix": 72, "len": 8,  "max": 25.5,  "div": 10,                             "unit": "bars"    }, "name": "Front right tire warning pressure"},
+    {"id": "VOLKSWAGEN_TID_FR",    "path": "Tires", "fmt": {           "len": 32, "max": 100,                                                      "unit": "scalar"  }, "name": "Front right tire sensor id"},
+    {"id": "VOLKSWAGEN_TP_FL",     "path": "Tires", "fmt": {"bix": 40, "len": 8,  "max": 6.375,             "div": 40,                             "unit": "bars"    }, "name": "Front left tire pressure",            "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "VOLKSWAGEN_TP_FR_V2",  "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,              "div": 10,             "nullmax": 25,  "unit": "bars"    }, "name": "Front right tire current pressure",   "suggestedMetric": "frontRightTirePressure"},
+    {"id": "VOLKSWAGEN_TT_FL",     "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 127,   "min": -40,            "add": -40, "nullmax": 127, "unit": "celsius" }, "name": "Front left tire temperature",         "suggestedMetric": "frontLeftTireTemperature"},
+    {"id": "VOLKSWAGEN_TP_2",      "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,              "div": 10,                             "unit": "bars"    }, "name": "Tire #2 pressure"},
+    {"id": "VOLKSWAGEN_TT_FR_V2",  "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,                          "add": -40,                 "unit": "celsius" }, "name": "Front right tire temperature",        "suggestedMetric": "frontRightTireTemperature"},
+    {"id": "VOLKSWAGEN_TT_2",      "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,                          "add": -40, "nullmax": 100, "unit": "celsius" }, "name": "Tire 2 temperature",                  "suggestedMetric": "frontRightTireTemperature"},
+    {"id": "VOLKSWAGEN_TP_SET_FL", "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 6.375,             "div": 40,                             "unit": "bars"    }, "name": "Front left tire pressure, set point"},
+    {"id": "VOLKSWAGEN_TPS_FR",    "path": "Tires", "fmt": {"bix": 64, "len": 8,  "max": 25.5,              "div": 10,                             "unit": "bars"    }, "name": "Front right tire specified pressure"},
+    {"id": "VOLKSWAGEN_TPW_FR",    "path": "Tires", "fmt": {"bix": 72, "len": 8,  "max": 25.5,              "div": 10,                             "unit": "bars"    }, "name": "Front right tire warning pressure"},
     {"id": "VOLKSWAGEN_TPOS_FR", "path": "Tires", "name": "Tire 2 position", "fmt": {"bix": 32, "len": 8, "map": {
           "0": { "description": "Front left",  "value": "FL" },
           "1": { "description": "Front right", "value": "FR" },
@@ -42,14 +46,16 @@
   ]},
 { "hdr": "70B", "fcm1": true, "dbg": true, "cmd": {"22": "18A2"}, "freq": 30,
   "signals": [
-    {"id": "VOLKSWAGEN_TID_RR",   "path": "Tires", "fmt": {           "len": 32, "max": 100,                                          "unit": "scalar"  }, "name": "Rear right tire sensor id"},
-    {"id": "VOLKSWAGEN_TP_RL_V2", "path": "Tires", "fmt": {"bix": 40, "len": 8,  "max": 6.375, "div": 40,                             "unit": "bars"    }, "name": "Rear left tire pressure",            "suggestedMetric": "rearLeftTirePressure"},
-    {"id": "VOLKSWAGEN_TP_RR",    "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25,  "unit": "bars"    }, "name": "Rear right tire current pressure",   "suggestedMetric": "rearRightTirePressure"},
-    {"id": "VOLKSWAGEN_TP_3",     "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25,  "unit": "bars"    }, "name": "Tire 3 current pressure",            "suggestedMetric": "rearLeftTirePressure"},
-    {"id": "VOLKSWAGEN_TT_RR",    "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40,                 "unit": "celsius" }, "name": "Rear right tire temperature",        "suggestedMetric": "rearRightTireTemperature"},
-    {"id": "VOLKSWAGEN_TT_3",     "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40, "nullmax": 100, "unit": "celsius" }, "name": "Tire 3 temperature",                 "suggestedMetric": "rearLeftTireTemperature"},
-    {"id": "VOLKSWAGEN_TPS_RR",   "path": "Tires", "fmt": {"bix": 64, "len": 8,  "max": 25.5,  "div": 10,                             "unit": "bars"    }, "name": "Rear right tire specified pressure"},
-    {"id": "VOLKSWAGEN_TPW_RR",   "path": "Tires", "fmt": {"bix": 72, "len": 8,  "max": 25.5,  "div": 10,                             "unit": "bars"    }, "name": "Rear right tire warning pressure"},
+    {"id": "VOLKSWAGEN_TID_RR",    "path": "Tires", "fmt": {           "len": 32, "max": 100,                                                      "unit": "scalar"  }, "name": "Rear right tire sensor id"},
+    {"id": "VOLKSWAGEN_TP_RL_V2",  "path": "Tires", "fmt": {"bix": 40, "len": 8,  "max": 6.375,             "div": 40,                             "unit": "bars"    }, "name": "Rear left tire pressure",            "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "VOLKSWAGEN_TP_RR",     "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,              "div": 10,             "nullmax": 25,  "unit": "bars"    }, "name": "Rear right tire current pressure",   "suggestedMetric": "rearRightTirePressure"},
+    {"id": "VOLKSWAGEN_TP_3",      "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,              "div": 10,             "nullmax": 25,  "unit": "bars"    }, "name": "Tire 3 current pressure",            "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "VOLKSWAGEN_TT_RL_V2",  "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 127,   "min": -40,            "add": -40, "nullmax": 127, "unit": "celsius" }, "name": "Rear left tire temperature",         "suggestedMetric": "rearLeftTireTemperature"},
+    {"id": "VOLKSWAGEN_TT_RR",     "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,                          "add": -40,                 "unit": "celsius" }, "name": "Rear right tire temperature",        "suggestedMetric": "rearRightTireTemperature"},
+    {"id": "VOLKSWAGEN_TT_3",      "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,                          "add": -40, "nullmax": 100, "unit": "celsius" }, "name": "Tire 3 temperature",                 "suggestedMetric": "rearLeftTireTemperature"},
+    {"id": "VOLKSWAGEN_TP_SET_RL", "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 6.375,             "div": 40,                             "unit": "bars"    }, "name": "Rear left tire pressure, set point"},
+    {"id": "VOLKSWAGEN_TPS_RR",    "path": "Tires", "fmt": {"bix": 64, "len": 8,  "max": 25.5,              "div": 10,                             "unit": "bars"    }, "name": "Rear right tire specified pressure"},
+    {"id": "VOLKSWAGEN_TPW_RR",    "path": "Tires", "fmt": {"bix": 72, "len": 8,  "max": 25.5,              "div": 10,                             "unit": "bars"    }, "name": "Rear right tire warning pressure"},
     {"id": "VOLKSWAGEN_TPOS_RR", "path": "Tires", "name": "Tire 3 position", "fmt": {"bix": 32, "len": 8, "map": {
           "0": { "description": "Front left",  "value": "FL" },
           "1": { "description": "Front right", "value": "FR" },
@@ -60,14 +66,16 @@
   ]},
 { "hdr": "70B", "fcm1": true, "dbg": true, "cmd": {"22": "18A3"}, "freq": 30,
   "signals": [
-    {"id": "VOLKSWAGEN_TID_FL",   "path": "Tires", "fmt": {           "len": 32, "max": 100,                                          "unit": "scalar"  }, "name": "Front left tire sensor id"},
-    {"id": "VOLKSWAGEN_TP_RR_V2", "path": "Tires", "fmt": {"bix": 40, "len": 8,  "max": 6.375, "div": 40,                             "unit": "bars"    }, "name": "Rear right tire pressure",           "suggestedMetric": "rearRightTirePressure"},
-    {"id": "VOLKSWAGEN_TP_FL_V2", "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25,  "unit": "bars"    }, "name": "Front left tire current pressure",   "suggestedMetric": "frontLeftTirePressure"},
-    {"id": "VOLKSWAGEN_TP_4",     "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,  "div": 10,             "nullmax": 25,  "unit": "bars"    }, "name": "Tire 4 current pressure",            "suggestedMetric": "rearRightTirePressure"},
-    {"id": "VOLKSWAGEN_TT_FL",    "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40,                 "unit": "celsius" }, "name": "Front left tire temperature",        "suggestedMetric": "frontLeftTireTemperature"},
-    {"id": "VOLKSWAGEN_TT_4",     "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,              "add": -40, "nullmax": 100, "unit": "celsius" }, "name": "Tire 4 temperature",                 "suggestedMetric": "rearRightTireTemperature"},
-    {"id": "VOLKSWAGEN_TPS_FL",   "path": "Tires", "fmt": {"bix": 64, "len": 8,  "max": 25.5,  "div": 10,                             "unit": "bars"    }, "name": "Front left tire specified pressure"},
-    {"id": "VOLKSWAGEN_TPW_FL",   "path": "Tires", "fmt": {"bix": 72, "len": 8,  "max": 25.5,  "div": 10,                             "unit": "bars"    }, "name": "Front left tire warning pressure"},
+    {"id": "VOLKSWAGEN_TID_FL",    "path": "Tires", "fmt": {           "len": 32, "max": 100,                                                      "unit": "scalar"  }, "name": "Front left tire sensor id"},
+    {"id": "VOLKSWAGEN_TP_RR_V2",  "path": "Tires", "fmt": {"bix": 40, "len": 8,  "max": 6.375,             "div": 40,                             "unit": "bars"    }, "name": "Rear right tire pressure",            "suggestedMetric": "rearRightTirePressure"},
+    {"id": "VOLKSWAGEN_TP_FL_V2",  "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,              "div": 10,             "nullmax": 25,  "unit": "bars"    }, "name": "Front left tire current pressure",    "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "VOLKSWAGEN_TP_4",      "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 25.5,              "div": 10,             "nullmax": 25,  "unit": "bars"    }, "name": "Tire 4 current pressure",             "suggestedMetric": "rearRightTirePressure"},
+    {"id": "VOLKSWAGEN_TT_RR_V2",  "path": "Tires", "fmt": {"bix": 48, "len": 8,  "max": 127,   "min": -40,            "add": -40, "nullmax": 127, "unit": "celsius" }, "name": "Rear right tire temperature",         "suggestedMetric": "rearRightTireTemperature"},
+    {"id": "VOLKSWAGEN_TT_FL_V2",  "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,                          "add": -40,                 "unit": "celsius" }, "name": "Front left tire temperature",         "suggestedMetric": "frontLeftTireTemperature"},
+    {"id": "VOLKSWAGEN_TT_4",      "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 100,                          "add": -40, "nullmax": 100, "unit": "celsius" }, "name": "Tire 4 temperature",                  "suggestedMetric": "rearRightTireTemperature"},
+    {"id": "VOLKSWAGEN_TP_SET_RR", "path": "Tires", "fmt": {"bix": 56, "len": 8,  "max": 6.375,             "div": 40,                             "unit": "bars"    }, "name": "Rear right tire pressure, set point"},
+    {"id": "VOLKSWAGEN_TPS_FL",    "path": "Tires", "fmt": {"bix": 64, "len": 8,  "max": 25.5,              "div": 10,                             "unit": "bars"    }, "name": "Front left tire specified pressure"},
+    {"id": "VOLKSWAGEN_TPW_FL",    "path": "Tires", "fmt": {"bix": 72, "len": 8,  "max": 25.5,              "div": 10,                             "unit": "bars"    }, "name": "Front left tire warning pressure"},
     {"id": "VOLKSWAGEN_TPOS_FL", "path": "Tires", "name": "Tire 4 position", "fmt": {"bix": 32, "len": 8, "map": {
           "0": { "description": "Front left",  "value": "FL" },
           "1": { "description": "Front right", "value": "FR" },
@@ -242,7 +250,8 @@
   ]},
 { "hdr": "710", "rax": "77A", "fcm1": true, "dbg": true, "cmd": {"22": "2AB8"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_HVBAT_KWH", "path": "Battery", "fmt": { "len": 32, "max": 3276, "div": 1310770, "unit": "kilowattHours" }, "name": "HV battery energy", "description": "Energy stored in the high voltage battery"}
+    {"id": "VOLKSWAGEN_HVBAT_KWH",       "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 1638,    "mul": 25, "div": 1000, "unit": "kilowattHours" }, "name": "HV battery energy",         "description": "Energy stored in the high voltage battery"},
+    {"id": "VOLKSWAGEN_HVBAT_E_CONTENT", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 1638.37, "mul": 25, "div": 1000, "unit": "kilowattHours" }, "name": "HV battery energy content", "description": "Energy stored in the high voltage battery"}
   ]},
 { "hdr": "710", "rax": "77A", "fcm1": true, "dbg": true, "cmd": {"22": "2AF7"}, "freq": 1,
   "signals": [
@@ -693,7 +702,7 @@
   "signals": [
     {"id": "VOLKSWAGEN_AAT_V2",         "path": "Climate", "fmt": { "len": 8,  "max": 63.5,   "min": -64,     "mul": 0.5,                        "sign": true, "unit": "celsius" }, "name": "Outside temperature"},
     {"id": "VOLKSWAGEN_AAT_FROMCABIN",  "path": "Climate", "fmt": { "len": 8,  "max": 63.5,   "min": -64,                 "div": 2,              "sign": true, "unit": "celsius" }, "name": "Outside temperature, from cabin"},
-    {"id": "VOLKSWAGEN_HVAC_OUTSIDE_T", "path": "Engine",  "fmt": { "len": 16, "max": 3276.7, "min": -3276.8,             "div": 10,             "sign": true, "unit": "celsius" }, "name": "Outside temperature"},
+    {"id": "VOLKSWAGEN_HVAC_OUTSIDE_T", "path": "Climate", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8,             "div": 10,             "sign": true, "unit": "celsius" }, "name": "Outside temperature"},
     {"id": "VOLKSWAGEN_AAT_746",        "path": "Climate", "fmt": { "len": 8,  "max": 77.5,   "min": -50,                 "div": 2,  "add": -50,               "unit": "celsius" }, "name": "Outside temperature"}
   ]},
 { "hdr": "746", "rax": "7B0", "fcm1": true, "dbg": true, "cmd": {"22": "260A"}, "freq": 1,
@@ -729,8 +738,9 @@
   ]},
 { "hdr": "746", "rax": "7B0", "fcm1": true, "dbg": true, "cmd": {"22": "261E"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_RECIRC_FLAP_ACT_STEPS", "path": "Climate", "fmt": {           "len": 16, "max": 65535,             "unit": "scalar"  }, "name": "Recirculation flap, actual steps"},
-    {"id": "VOLKSWAGEN_RECIRC_FLAP_ACT_PCT",   "path": "Climate", "fmt": {"bix": 16, "len": 8,  "max": 100,   "mul": 0.5, "unit": "percent" }, "name": "Recirculation flap, actual"}
+    {"id": "VOLKSWAGEN_RECIRC_FLAP_ACT_STEPS", "path": "Climate", "fmt": {           "len": 16, "max": 65535,                       "unit": "scalar"  }, "name": "Recirculation flap, actual steps"},
+    {"id": "VOLKSWAGEN_RECIRC_FLAP_ACT_PCT",   "path": "Climate", "fmt": {"bix": 16, "len": 8,  "max": 100,   "mul": 0.5,           "unit": "percent" }, "name": "Recirculation flap, actual"},
+    {"id": "VOLKSWAGEN_RECIRC_ACT_PCT",        "path": "Climate", "fmt": {"bix": 16, "len": 8,  "max": 100,               "div": 2, "unit": "percent" }, "name": "Recirculation flap, actual"}
   ]},
 { "hdr": "746", "rax": "7B0", "fcm1": true, "dbg": true, "cmd": {"22": "261F"}, "freq": 1,
   "signals": [
@@ -797,7 +807,7 @@
 { "hdr": "767", "rax": "7D1", "fcm1": true, "dbg": true, "cmd": {"22": "0838"}, "freq": 5,
   "signals": [
     {"id": "VOLKSWAGEN_ECALL_BATTERY_CHARGE_STATUS", "path": "Battery", "fmt": {          "len": 8, "max": 100, "unit": "scalar"  }, "name": "Ecall battery charge status"},
-    {"id": "VOLKSWAGEN_MQB_ECALL_BAT_CRIT",          "path": "Battery", "fmt": {          "len": 8, "max": 100, "unit": "percent" }, "name": "Emergency call battery critical status"},
+    {"id": "VOLKSWAGEN_ECALL_BAT_CRIT",              "path": "Battery", "fmt": {          "len": 8, "max": 100, "unit": "percent" }, "name": "Emergency call battery critical status"},
     {"id": "VOLKSWAGEN_ECALL_SOC",                   "path": "Battery", "fmt": {"bix": 8, "len": 8, "max": 100, "unit": "percent" }, "name": "eCall battery charge level"},
     {"id": "VOLKSWAGEN_ECALL_STATUS", "path": "Battery", "name": "eCall battery status", "fmt": {"len": 8, "map": {
           "1": { "description": "CRITICAL", "value": "CRITICAL" },
@@ -5254,6 +5264,14 @@
   "signals": [
     {"id": "VOLKSWAGEN_BMS_I", "path": "Battery", "fmt": { "len": 16, "max": 166269, "min": -1500, "mul": 2.56, "add": -1500, "nullmin": -1500, "unit": "amps" }, "name": "HV battery current", "suggestedMetric": "tractionBatteryCurrent"}
   ]},
+{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "180A"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_HVBAT_V_180A", "path": "Battery", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "volts" }, "name": "HV battery voltage, measurement 2", "description": "Reads within 1 V of the pack voltage on 1801; which point of the pack it measures is not known."}
+  ]},
+{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "180B"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_HVBAT_V_180B", "path": "Battery", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "volts" }, "name": "HV battery voltage, measurement 3", "description": "Reads within 1 V of the pack voltage on 1801; which point of the pack it measures is not known."}
+  ]},
 { "hdr": "7E5", "rax": "7ED", "din": "03", "dbg": true, "cmd": {"22": "180C"}, "freq": 1,
   "signals": [
     {"id": "VOLKSWAGEN_BMS_BMCE_T1", "path": "Engine", "fmt": { "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "BMC-E temperature, 1"}
@@ -5273,6 +5291,14 @@
 { "hdr": "7E5", "rax": "7ED", "din": "03", "dbg": true, "cmd": {"22": "1810"}, "freq": 1,
   "signals": [
     {"id": "VOLKSWAGEN_BMS_BMCE_T_CAN", "path": "Engine", "fmt": { "len": 8, "max": 205, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "BMC-E temperature, 4"}
+  ]},
+{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "1818"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_HVBAT_V_1818", "path": "Battery", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "volts" }, "name": "HV battery voltage, measurement 4", "description": "Reads within 1 V of the pack voltage on 1801; which point of the pack it measures is not known."}
+  ]},
+{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "181B"}, "freq": 1,
+  "signals": [
+    {"id": "VOLKSWAGEN_HVBAT_V_181B", "path": "Battery", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "volts" }, "name": "HV battery voltage, measurement 5", "description": "Reads within 1 V of the pack voltage on 1801; which point of the pack it measures is not known."}
   ]},
 { "hdr": "7E5", "rax": "7ED", "din": "03", "dbg": true, "cmd": {"22": "181C"}, "freq": 1,
   "signals": [
