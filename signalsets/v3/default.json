@@ -1,4 +1,6 @@
 { "ecu": [
+    { "hdr": "714", "type": "cluster" },
+    { "hdr": "746", "type": "hvac" },
     { "hdr": "7E1", "type": "transmission" }
   ],
   "commands": [
@@ -456,7 +458,7 @@
   ]},
 { "hdr": "714", "rax": "77E", "fcm1": true, "dbg": true, "cmd": {"22": "22B8"}, "freq": 30,
   "signals": [
-    {"id": "VOLKSWAGEN_ODO_MILEAGE_HR", "path": "Trips", "fmt": { "len": 32, "max": 4294967.2949999999, "div": 1000, "unit": "kilometers" }, "name": "Odometer, mileage, HR"}
+    {"id": "VOLKSWAGEN_ODO_MILEAGE_HR", "path": "Trips", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "kilometers" }, "name": "Odometer, mileage, HR"}
   ]},
 { "hdr": "714", "rax": "77E", "dbg": true, "cmd": {"22": "22E0"}, "freq": 1,
   "signals": [
@@ -875,12 +877,12 @@
   ]},
 { "hdr": "7E0", "din": "03", "dbg": true, "cmd": {"22": "115E"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_TIME_LAST_REGEN", "fmt": { "len": 32, "max": 0.426652, "div": 10066666667, "unit": "minutes" }, "name": "Time since last regeneration"}
+    {"id": "VOLKSWAGEN_PQ35_TIME_LAST_REGEN", "fmt": { "len": 32, "max": 0.426, "div": 10066666667, "unit": "minutes" }, "name": "Time since last regeneration"}
   ]},
 { "hdr": "7E0", "dbg": true, "cmd": {"22": "1164"}, "freq": 30,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_SRV_REGEN_DUR", "path": "Battery", "fmt": { "len": 32, "max": 715827.8822136688, "mul": 0.0001666667,             "unit": "minutes" }, "name": "Service regeneration current duration"},
-    {"id": "VOLKSWAGEN_HVBAT_SOC_DISP",     "path": "Battery", "fmt": { "len": 16, "max": 100,                                    "div": 100, "unit": "percent" }, "name": "HV battery charge (displayed)",         "suggestedMetric": "stateOfCharge"}
+    {"id": "VOLKSWAGEN_PQ35_SRV_REGEN_DUR", "path": "Battery", "fmt": { "len": 32, "max": 715827, "mul": 0.0001666667,             "unit": "minutes" }, "name": "Service regeneration current duration"},
+    {"id": "VOLKSWAGEN_HVBAT_SOC_DISP",     "path": "Battery", "fmt": { "len": 16, "max": 100,                         "div": 100, "unit": "percent" }, "name": "HV battery charge (displayed)",         "suggestedMetric": "stateOfCharge"}
   ]},
 { "hdr": "7E0", "dbg": true, "cmd": {"22": "1165"}, "freq": 5,
   "signals": [
@@ -1242,19 +1244,19 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10D0"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_INJ_1_RAIL_P_1", "path": "Engine", "fmt": { "len": 16, "max": 1.63835, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 1 rail pressure calibration point 1"}
+    {"id": "VOLKSWAGEN_PQ35_INJ_1_RAIL_P_1", "path": "Engine", "fmt": { "len": 16, "max": 1.63, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 1 rail pressure calibration point 1"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10D1"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_INJ_3_RAIL_P_1", "path": "Engine", "fmt": { "len": 16, "max": 1.63835, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 3 rail pressure calibration point 1"}
+    {"id": "VOLKSWAGEN_PQ35_INJ_3_RAIL_P_1", "path": "Engine", "fmt": { "len": 16, "max": 1.63, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 3 rail pressure calibration point 1"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10D2"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_INJ_3_RAIL_P_2", "path": "Engine", "fmt": { "len": 16, "max": 1.63835, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 3 rail pressure calibration point 2"}
+    {"id": "VOLKSWAGEN_PQ35_INJ_3_RAIL_P_2", "path": "Engine", "fmt": { "len": 16, "max": 1.63, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 3 rail pressure calibration point 2"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10D3"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_INJ_2_RAIL_P_1", "path": "Engine", "fmt": { "len": 16, "max": 1.63835, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 2 rail pressure calibration point 1"}
+    {"id": "VOLKSWAGEN_PQ35_INJ_2_RAIL_P_1", "path": "Engine", "fmt": { "len": 16, "max": 1.63, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 2 rail pressure calibration point 1"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10D5"}, "freq": 1,
   "signals": [
@@ -1262,31 +1264,31 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10D6"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_INJ_1_RAIL_P_2", "path": "Engine", "fmt": { "len": 16, "max": 1.63835, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 1 rail pressure calibration point 2"}
+    {"id": "VOLKSWAGEN_PQ35_INJ_1_RAIL_P_2", "path": "Engine", "fmt": { "len": 16, "max": 1.63, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 1 rail pressure calibration point 2"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10D8"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_INJ_4_RAIL_P_2", "path": "Engine", "fmt": { "len": 16, "max": 1.63835, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 4 rail pressure calibration point 2"}
+    {"id": "VOLKSWAGEN_PQ35_INJ_4_RAIL_P_2", "path": "Engine", "fmt": { "len": 16, "max": 1.63, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 4 rail pressure calibration point 2"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10D9"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_INJ_2_RAIL_P_2", "path": "Engine", "fmt": { "len": 16, "max": 1.63835, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 2 rail pressure calibration point 2"}
+    {"id": "VOLKSWAGEN_PQ35_INJ_2_RAIL_P_2", "path": "Engine", "fmt": { "len": 16, "max": 1.63, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 2 rail pressure calibration point 2"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10DC"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_INJ_1_RAIL_P_3", "path": "Engine", "fmt": { "len": 16, "max": 1.63835, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 1 rail pressure calibration point 3"}
+    {"id": "VOLKSWAGEN_PQ35_INJ_1_RAIL_P_3", "path": "Engine", "fmt": { "len": 16, "max": 1.63, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 1 rail pressure calibration point 3"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10DD"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_INJ_3_RAIL_P_3", "path": "Engine", "fmt": { "len": 16, "max": 1.63835, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 3 rail pressure calibration point 3"}
+    {"id": "VOLKSWAGEN_PQ35_INJ_3_RAIL_P_3", "path": "Engine", "fmt": { "len": 16, "max": 1.63, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 3 rail pressure calibration point 3"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10DE"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_INJ_4_RAIL_P_3", "path": "Engine", "fmt": { "len": 16, "max": 1.63835, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 4 rail pressure calibration point 3"}
+    {"id": "VOLKSWAGEN_PQ35_INJ_4_RAIL_P_3", "path": "Engine", "fmt": { "len": 16, "max": 1.63, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 4 rail pressure calibration point 3"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10DF"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_INJ_2_RAIL_P_3", "path": "Engine", "fmt": { "len": 16, "max": 1.63835, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 2 rail pressure calibration point 3"}
+    {"id": "VOLKSWAGEN_PQ35_INJ_2_RAIL_P_3", "path": "Engine", "fmt": { "len": 16, "max": 1.63, "min": -1.6384, "div": 20000, "sign": true, "unit": "milliseconds" }, "name": "Injector 2 rail pressure calibration point 3"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10E0"}, "freq": 5,
   "signals": [
@@ -1454,8 +1456,8 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "113A"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_SEG_AD_MMV_ER_H_2",  "path": "Engine", "fmt": { "len": 16, "max": 7.8123,   "min": -7.8125, "mul": 78123,        "div": 327670000, "sign": true, "unit": "percent" }, "name": "SEG_AD_MMV_ER_H, 2"},
-    {"id": "VOLKSWAGEN_LONG_TERM_THROTTLE", "path": "Engine", "fmt": { "len": 16, "max": 3.999935,                 "mul": 0.0000610351,                                 "unit": "percent" }, "name": "Long term throttle adaptation to MAF sensor"}
+    {"id": "VOLKSWAGEN_SEG_AD_MMV_ER_H_2",  "path": "Engine", "fmt": { "len": 16, "max": 7.8123, "min": -7.8125, "mul": 78123,        "div": 327670000, "sign": true, "unit": "percent" }, "name": "SEG_AD_MMV_ER_H, 2"},
+    {"id": "VOLKSWAGEN_LONG_TERM_THROTTLE", "path": "Engine", "fmt": { "len": 16, "max": 3.99,                   "mul": 0.0000610351,                                 "unit": "percent" }, "name": "Long term throttle adaptation to MAF sensor"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "113B"}, "freq": 1,
   "signals": [
@@ -1519,8 +1521,8 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "1156"}, "freq": 30,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_DIST_LAST_REGEN", "path": "Engine.DPF", "fmt": { "len": 32, "max": 4294967.2949999999, "div": 1000, "unit": "kilometers" }, "name": "Distance since last regeneration"},
-    {"id": "VOLKSWAGEN_HVBAT_SOC",            "path": "Battery",    "fmt": { "len": 8,  "max": 100,                "div": 2,    "unit": "percent"    }, "name": "HV battery charge",                "suggestedMetric": "stateOfCharge"}
+    {"id": "VOLKSWAGEN_PQ35_DIST_LAST_REGEN", "path": "Engine.DPF", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "kilometers" }, "name": "Distance since last regeneration"},
+    {"id": "VOLKSWAGEN_HVBAT_SOC",            "path": "Battery",    "fmt": { "len": 8,  "max": 100,     "div": 2,    "unit": "percent"    }, "name": "HV battery charge",                "suggestedMetric": "stateOfCharge"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1158"}, "freq": 1,
   "signals": [
@@ -1734,7 +1736,7 @@
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11DC"}, "freq": 1,
   "signals": [
     {"id": "VOLKSWAGEN_MAP_RAW",            "path": "Engine", "fmt": { "len": 16, "max": 5119.9218, "mul": 5,      "div": 64,    "unit": "unknown" }, "name": "Manifold absolute pressure, raw value"},
-    {"id": "VOLKSWAGEN_INT_MANIFOLD_P_RAW", "path": "Engine", "fmt": { "len": 8,  "max": 19.921875, "mul": 781.25, "div": 10000, "unit": "unknown" }, "name": "Intake manifold pressure raw value"}
+    {"id": "VOLKSWAGEN_INT_MANIFOLD_P_RAW", "path": "Engine", "fmt": { "len": 8,  "max": 19.92,     "mul": 781.25, "div": 10000, "unit": "unknown" }, "name": "Intake manifold pressure raw value"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11DD"}, "freq": 1,
   "signals": [
@@ -1799,19 +1801,19 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "120E"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_KNOCK_SNS_C1_V_MS", "path": "Engine", "fmt": { "len": 32, "max": 3276.8023480473, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 1 "}
+    {"id": "VOLKSWAGEN_KNOCK_SNS_C1_V_MS", "path": "Engine", "fmt": { "len": 32, "max": 3276, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 1 "}
   ]},
 { "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "120F"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_KNOCK_SNS_C3_V_MS", "path": "Engine", "fmt": { "len": 32, "max": 3276.8023480473, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 3 "}
+    {"id": "VOLKSWAGEN_KNOCK_SNS_C3_V_MS", "path": "Engine", "fmt": { "len": 32, "max": 3276, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 3 "}
   ]},
 { "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1210"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_KNOCK_SNS_C4_V_MS", "path": "Engine", "fmt": { "len": 32, "max": 3276.8023480473, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 4 "}
+    {"id": "VOLKSWAGEN_KNOCK_SNS_C4_V_MS", "path": "Engine", "fmt": { "len": 32, "max": 3276, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 4 "}
   ]},
 { "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1211"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_KNOCK_SNS_C2_V_MS", "path": "Engine", "fmt": { "len": 32, "max": 3276.8023480473, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 2 "}
+    {"id": "VOLKSWAGEN_KNOCK_SNS_C2_V_MS", "path": "Engine", "fmt": { "len": 32, "max": 3276, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 2 "}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1213"}, "freq": 1,
   "signals": [
@@ -1888,7 +1890,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "128C"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_AVG_INJ_TIME", "path": "Engine", "fmt": { "len": 32, "max": 1717986.9180000001, "div": 2500, "unit": "milliseconds" }, "name": "Avg. injection time"}
+    {"id": "VOLKSWAGEN_AVG_INJ_TIME", "path": "Engine", "fmt": { "len": 32, "max": 1717986, "div": 2500, "unit": "milliseconds" }, "name": "Avg. injection time"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1290"}, "freq": 5,
   "signals": [
@@ -1928,11 +1930,11 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "133F"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_TQ_REDUCTION_REQ_ESP", "path": "Engine", "fmt": { "len": 32, "max": 214748364.6999999881, "min": -214748364.8000000119, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Torque reduction request from ESP"}
+    {"id": "VOLKSWAGEN_TQ_REDUCTION_REQ_ESP", "path": "Engine", "fmt": { "len": 32, "max": 214748364, "min": -214748364, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Torque reduction request from ESP"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1340"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_TQ_INCREASE_REQ_ESP", "path": "Engine", "fmt": { "len": 32, "max": 214748364.6999999881, "min": -214748364.8000000119, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Torque increase request from ESP"}
+    {"id": "VOLKSWAGEN_TQ_INCREASE_REQ_ESP", "path": "Engine", "fmt": { "len": 32, "max": 214748364, "min": -214748364, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Torque increase request from ESP"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1341"}, "freq": 1,
   "signals": [
@@ -2056,7 +2058,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "13CD"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_MAF_RATE", "path": "Engine", "fmt": { "len": 16, "max": 2047.96875, "div": 32, "unit": "unknown" }, "name": "Mass air flow rate"}
+    {"id": "VOLKSWAGEN_MAF_RATE", "path": "Engine", "fmt": { "len": 16, "max": 2047, "div": 32, "unit": "unknown" }, "name": "Mass air flow rate"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "13F2"}, "freq": 1,
   "signals": [
@@ -2136,8 +2138,8 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1490"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_BRAKE_BOOSTER_LOW_P_ACT", "path": "Control", "fmt": { "len": 16, "max": 2559.9937,                        "mul": 39063,  "div": 1000000,               "unit": "unknown" }, "name": "Brake booster low pressure, actual"},
-    {"id": "VOLKSWAGEN_BRAKE_BOOSTER_ACT",       "path": "Control", "fmt": { "len": 16, "max": 1279.944554, "min": -1279.983616, "mul": 390.62, "div": 10000,   "sign": true, "unit": "unknown" }, "name": "Brake booster, actual vacuum"}
+    {"id": "VOLKSWAGEN_BRAKE_BOOSTER_LOW_P_ACT", "path": "Control", "fmt": { "len": 16, "max": 2559.9937,               "mul": 39063,  "div": 1000000,               "unit": "unknown" }, "name": "Brake booster low pressure, actual"},
+    {"id": "VOLKSWAGEN_BRAKE_BOOSTER_ACT",       "path": "Control", "fmt": { "len": 16, "max": 1279,      "min": -1279, "mul": 390.62, "div": 10000,   "sign": true, "unit": "unknown" }, "name": "Brake booster, actual vacuum"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "149E"}, "freq": 5,
   "signals": [
@@ -2145,7 +2147,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "14A1"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_RATED_DRIVE_TQ", "path": "Engine", "fmt": { "len": 32, "max": 214748364.6999999881, "min": -214748364.8000000119, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Rated drive torque"}
+    {"id": "VOLKSWAGEN_RATED_DRIVE_TQ", "path": "Engine", "fmt": { "len": 32, "max": 214748364, "min": -214748364, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Rated drive torque"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "14B4"}, "freq": 1,
   "signals": [
@@ -2310,11 +2312,11 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "15E7"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_EFFECTIVE_INJ_DUR", "path": "Engine", "fmt": { "len": 32, "max": 4294967.2949999999, "div": 1000, "unit": "milliseconds" }, "name": "Effective injection duration"}
+    {"id": "VOLKSWAGEN_EFFECTIVE_INJ_DUR", "path": "Engine", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "milliseconds" }, "name": "Effective injection duration"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1610"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_REQ_BRAKE_TQ", "path": "Control", "fmt": { "len": 32, "max": 214748364.6999999881, "min": -214748364.8000000119, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Requested brake torque, auxiliary system"}
+    {"id": "VOLKSWAGEN_REQ_BRAKE_TQ", "path": "Control", "fmt": { "len": 32, "max": 214748364, "min": -214748364, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Requested brake torque, auxiliary system"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1626"}, "freq": 5,
   "signals": [
@@ -2534,7 +2536,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1ABD"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_MQB_DPF_OIL_ASH_MASS", "path": "Engine", "fmt": { "len": 32, "max": 512.003051, "mul": 0.0011921, "div": 10000, "unit": "unknown" }, "name": "Diesel particulate filter oil ash mass"}
+    {"id": "VOLKSWAGEN_MQB_DPF_OIL_ASH_MASS", "path": "Engine", "fmt": { "len": 32, "max": 512, "mul": 0.0011921, "div": 10000, "unit": "unknown" }, "name": "Diesel particulate filter oil ash mass"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1ABE"}, "freq": 1,
   "signals": [
@@ -2638,8 +2640,8 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2005"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_BRAKE_BOOSTER_P", "path": "Control", "fmt": { "len": 16, "max": 5434.00032855, "mul": 0.08291753,              "unit": "unknown" }, "name": "Brake booster pressure"},
-    {"id": "VOLKSWAGEN_BRAKE_BST_P",          "path": "Control", "fmt": { "len": 16, "max": 65.535,                           "div": 1000, "unit": "bars"    }, "name": "Brake booster pressure"}
+    {"id": "VOLKSWAGEN_PQ35_BRAKE_BOOSTER_P", "path": "Control", "fmt": { "len": 16, "max": 5434,   "mul": 0.08291753,              "unit": "unknown" }, "name": "Brake booster pressure"},
+    {"id": "VOLKSWAGEN_BRAKE_BST_P",          "path": "Control", "fmt": { "len": 16, "max": 65.535,                    "div": 1000, "unit": "bars"    }, "name": "Brake booster pressure"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2006"}, "freq": 30,
   "signals": [
@@ -2676,7 +2678,7 @@
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "201A"}, "freq": 1,
   "signals": [
     {"id": "VOLKSWAGEN_CAM_ADJ_EXH_ACT", "path": "Engine", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "degrees" }, "name": "Camshaft adjustment, exhaust, actual value"},
-    {"id": "VOLKSWAGEN_EOT_CALC",        "path": "Engine", "fmt": { "len": 16, "max": 65535,                                           "unit": "celsius" }, "name": "Engine oil temperature, calculated"}
+    {"id": "VOLKSWAGEN_EOT_CALC",        "path": "Engine", "fmt": { "len": 16, "max": 3276,   "min": -3276,   "div": 10, "sign": true, "unit": "celsius" }, "name": "Engine oil temperature, calculated"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "201D"}, "freq": 1,
   "signals": [
@@ -2748,19 +2750,19 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "2046"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_INJ_AMOUNT_DEV_CYL_1", "path": "Engine", "fmt": { "len": 16, "max": 12.000258, "min": -12.000624, "mul": 0.00036623, "sign": true, "unit": "unknown" }, "name": "Injection amount deviation cylinder 1"}
+    {"id": "VOLKSWAGEN_INJ_AMOUNT_DEV_CYL_1", "path": "Engine", "fmt": { "len": 16, "max": 12, "min": -12, "mul": 0.00036623, "sign": true, "unit": "unknown" }, "name": "Injection amount deviation cylinder 1"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "2047"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_INJ_AMOUNT_DEV_CYL_2", "path": "Engine", "fmt": { "len": 16, "max": 12.000258, "min": -12.000624, "mul": 0.00036623, "sign": true, "unit": "unknown" }, "name": "Injection amount deviation cylinder 2"}
+    {"id": "VOLKSWAGEN_INJ_AMOUNT_DEV_CYL_2", "path": "Engine", "fmt": { "len": 16, "max": 12, "min": -12, "mul": 0.00036623, "sign": true, "unit": "unknown" }, "name": "Injection amount deviation cylinder 2"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "2048"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_INJ_AMOUNT_DEV_CYL_3", "path": "Engine", "fmt": { "len": 16, "max": 12.000258, "min": -12.000624, "mul": 0.00036623, "sign": true, "unit": "unknown" }, "name": "Injection amount deviation cylinder 3"}
+    {"id": "VOLKSWAGEN_INJ_AMOUNT_DEV_CYL_3", "path": "Engine", "fmt": { "len": 16, "max": 12, "min": -12, "mul": 0.00036623, "sign": true, "unit": "unknown" }, "name": "Injection amount deviation cylinder 3"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "2049"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_INJ_AMOUNT_DEV_CYL_4", "path": "Engine", "fmt": { "len": 16, "max": 12.000258, "min": -12.000624, "mul": 0.00036623, "sign": true, "unit": "unknown" }, "name": "Injection amount deviation cylinder 4"}
+    {"id": "VOLKSWAGEN_INJ_AMOUNT_DEV_CYL_4", "path": "Engine", "fmt": { "len": 16, "max": 12, "min": -12, "mul": 0.00036623, "sign": true, "unit": "unknown" }, "name": "Injection amount deviation cylinder 4"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "204C"}, "freq": 1,
   "signals": [
@@ -2824,7 +2826,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2085"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_DPF_OFFSET_DIFF_P", "path": "Engine", "fmt": { "len": 16, "max": 5239.84375, "min": -5000, "mul": 0.15625, "add": -5000, "unit": "unknown" }, "name": "Diesel particulate filter offset for differential pressure"}
+    {"id": "VOLKSWAGEN_DPF_OFFSET_DIFF_P", "path": "Engine", "fmt": { "len": 16, "max": 5239, "min": -5000, "mul": 0.15625, "add": -5000, "unit": "unknown" }, "name": "Diesel particulate filter offset for differential pressure"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2087"}, "freq": 1,
   "signals": [
@@ -2842,7 +2844,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "208A"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_OIL_ASH_RESIDUE", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "unknown" }, "name": "Oil ash residue"}
+    {"id": "VOLKSWAGEN_OIL_ASH_RESIDUE", "path": "Engine", "fmt": { "len": 32, "max": 1310, "mul": 0.0000003052, "unit": "unknown" }, "name": "Oil ash residue"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "208B"}, "freq": 1,
   "signals": [
@@ -2851,13 +2853,13 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "208C"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_DPF_SOOT_MEAS",  "path": "Engine", "fmt": { "len": 16, "max": 327.67, "min": -327.68, "div": 100, "sign": true, "unit": "unknown" }, "name": "Diesel particulate filter soot measured"},
-    {"id": "VOLKSWAGEN_SOOT_MASS_MEAS", "path": "Engine", "fmt": { "len": 16, "max": 65535,                                            "unit": "unknown" }, "name": "Soot mass measured"}
+    {"id": "VOLKSWAGEN_DPF_SOOT_MEAS",  "path": "Engine", "fmt": { "len": 16, "max": 327.67, "min": -327.68, "div": 100,              "sign": true, "unit": "unknown" }, "name": "Diesel particulate filter soot measured"},
+    {"id": "VOLKSWAGEN_SOOT_MASS_MEAS", "path": "Engine", "fmt": { "len": 16, "max": 127,    "min": -128,    "div": 256, "add": -128,               "unit": "unknown" }, "name": "Soot mass measured"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "208D"}, "freq": 30,
   "signals": [
-    {"id": "VOLKSWAGEN_GPF_DIST_SINCE_REGEN", "path": "Trips", "fmt": { "len": 32, "max": 4294967.2949999999, "div": 1000, "unit": "kilometers" }, "name": "Gasoline particulate filter distance since last regeneration"},
-    {"id": "VOLKSWAGEN_DIST_SINCE_REGEN",     "path": "Trips", "fmt": { "len": 16, "max": 6553.5,             "div": 10,   "unit": "kilometers" }, "name": "Distance since last regeneration"}
+    {"id": "VOLKSWAGEN_GPF_DIST_SINCE_REGEN", "path": "Trips", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "kilometers" }, "name": "Gasoline particulate filter distance since last regeneration"},
+    {"id": "VOLKSWAGEN_DIST_SINCE_REGEN",     "path": "Trips", "fmt": { "len": 16, "max": 6553.5,  "div": 10,   "unit": "kilometers" }, "name": "Distance since last regeneration"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2097"}, "freq": 1,
   "signals": [
@@ -3196,7 +3198,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "39A3"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_CHG_P_ACTUATOR_SPEC", "path": "Battery", "fmt": { "len": 16, "max": 100, "mul": 0.012207, "unit": "percent" }, "name": "Charge pressure actuator, specified position"}
+    {"id": "VOLKSWAGEN_CHG_P_ACTUATOR_SPEC", "path": "Battery", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "percent" }, "name": "Charge pressure actuator, specified position"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "39A4"}, "freq": 1,
   "signals": [
@@ -3590,11 +3592,9 @@
   "signals": [
     {"id": "VOLKSWAGEN_SERVICE_LIM_7E0", "path": "Engine", "fmt": { "len": 16, "max": 327.67, "min": -327.68, "div": 100, "sign": true, "unit": "unknown" }, "name": "Service limit"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "58D1"}, "freq": 30,
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "58D1"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_ENG_OIL_LEVEL_ODO",         "path": "Trips",  "fmt": {           "len": 32, "max": 4294967295,                                           "unit": "kilometers" }, "name": "Engine oil level, odometer reading at entry"},
-    {"id": "VOLKSWAGEN_ENG_OIL_LEVEL_ODO_READING", "path": "Trips",  "fmt": {"bix": 32, "len": 32, "max": 4294967295,                                           "unit": "kilometers" }, "name": "Engine oil level, odometer reading when determining oil level"},
-    {"id": "VOLKSWAGEN_ENG_OIL_LEVEL",             "path": "Engine", "fmt": {"bix": 64, "len": 16, "max": 100,        "min": -327.68, "div": 100, "sign": true, "unit": "percent"    }, "name": "Engine oil level current value"}
+    {"id": "VOLKSWAGEN_ENG_OIL_LEVEL", "path": "Engine", "fmt": {"bix": 64, "len": 16, "max": 100, "min": -327.68, "div": 100, "sign": true, "unit": "percent" }, "name": "Engine oil level current value"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "F406"}, "freq": 1,
   "signals": [
@@ -3822,7 +3822,7 @@
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1063"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_CLUTCH_1_CHAR_CURVE_SHIFT", "path": "Transmission", "fmt": { "len": 16, "blsb": true, "max": 32.111, "min": -32.11264, "mul": 9.8, "div": 10000, "sign": true, "unit": "millimeters" }, "name": "Clutch 1 characteristic curve shift"}
+    {"id": "VOLKSWAGEN_PQ35_CLUTCH_1_CHAR_CURVE_SHIFT", "path": "Transmission", "fmt": { "len": 16, "blsb": true, "max": 32.111, "min": -32.11, "mul": 9.8, "div": 10000, "sign": true, "unit": "millimeters" }, "name": "Clutch 1 characteristic curve shift"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1064"}, "freq": 5,
   "signals": [
@@ -3894,7 +3894,7 @@
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1078"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_CLUTCH_2_CHAR_CURVE_SHIFT", "path": "Transmission", "fmt": { "len": 16, "blsb": true, "max": 32.111, "min": -32.11264, "mul": 9.8, "div": 10000, "sign": true, "unit": "millimeters" }, "name": "Clutch 2 characteristic curve shift"}
+    {"id": "VOLKSWAGEN_PQ35_CLUTCH_2_CHAR_CURVE_SHIFT", "path": "Transmission", "fmt": { "len": 16, "blsb": true, "max": 32.111, "min": -32.11, "mul": 9.8, "div": 10000, "sign": true, "unit": "millimeters" }, "name": "Clutch 2 characteristic curve shift"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1079"}, "freq": 5,
   "signals": [
@@ -5252,7 +5252,7 @@
   ]},
 { "hdr": "7E5", "rax": "7ED", "din": "03", "dbg": true, "cmd": {"22": "1802"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_BMS_I", "path": "Battery", "fmt": { "len": 16, "max": 166269, "min": -1500, "mul": 2.56, "add": -1500, "unit": "amps" }, "name": "HV battery current", "suggestedMetric": "tractionBatteryCurrent"}
+    {"id": "VOLKSWAGEN_BMS_I", "path": "Battery", "fmt": { "len": 16, "max": 166269, "min": -1500, "mul": 2.56, "add": -1500, "nullmin": -1500, "unit": "amps" }, "name": "HV battery current", "suggestedMetric": "tractionBatteryCurrent"}
   ]},
 { "hdr": "7E5", "rax": "7ED", "din": "03", "dbg": true, "cmd": {"22": "180C"}, "freq": 1,
   "signals": [
@@ -6368,7 +6368,7 @@
   ]},
 { "hdr": "FC00", "rax": "FE0076", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1160"}, "freq": 30,
   "signals": [
-    {"id": "VOLKSWAGEN_ECU_DIST_DRIVEN", "path": "Trips", "fmt": { "len": 32, "max": 4294967.2949999999, "div": 1000, "unit": "kilometers" }, "name": "Engine control unit distance driven"}
+    {"id": "VOLKSWAGEN_ECU_DIST_DRIVEN", "path": "Trips", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "kilometers" }, "name": "Engine control unit distance driven"}
   ]},
 { "hdr": "FC00", "rax": "FE0076", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1161"}, "freq": 0.25,
   "signals": [
@@ -6380,19 +6380,19 @@
   ]},
 { "hdr": "FC00", "rax": "FE0076", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "120E"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_KNOCK_SNS_C1_V_MS_V2", "path": "Engine", "fmt": { "len": 32, "max": 3276.8023480473, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 1 "}
+    {"id": "VOLKSWAGEN_KNOCK_SNS_C1_V_MS_V2", "path": "Engine", "fmt": { "len": 32, "max": 3276, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 1 "}
   ]},
 { "hdr": "FC00", "rax": "FE0076", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "120F"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_KNOCK_SNS_C3_V_MS_V2", "path": "Engine", "fmt": { "len": 32, "max": 3276.8023480473, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 3 "}
+    {"id": "VOLKSWAGEN_KNOCK_SNS_C3_V_MS_V2", "path": "Engine", "fmt": { "len": 32, "max": 3276, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 3 "}
   ]},
 { "hdr": "FC00", "rax": "FE0076", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1210"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_KNOCK_SNS_C4_V_MS_V2", "path": "Engine", "fmt": { "len": 32, "max": 3276.8023480473, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 4 "}
+    {"id": "VOLKSWAGEN_KNOCK_SNS_C4_V_MS_V2", "path": "Engine", "fmt": { "len": 32, "max": 3276, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 4 "}
   ]},
 { "hdr": "FC00", "rax": "FE0076", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1211"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_KNOCK_SNS_C2_V_MS_V2", "path": "Engine", "fmt": { "len": 32, "max": 3276.8023480473, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 2 "}
+    {"id": "VOLKSWAGEN_KNOCK_SNS_C2_V_MS_V2", "path": "Engine", "fmt": { "len": 32, "max": 3276, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 2 "}
   ]},
 { "hdr": "FC00", "rax": "FE0076", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1272"}, "freq": 5,
   "signals": [
@@ -6400,7 +6400,7 @@
   ]},
 { "hdr": "FC00", "rax": "FE0076", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1290"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_OXYGEN_SNS_1_BANK_1_CERAMIC_T_V2", "path": "Engine", "fmt": { "len": 16, "max": 1262.793795, "min": -273.15, "mul": 234.37, "div": 10000, "add": -273.15, "unit": "celsius" }, "name": "Oxygen sensor 1 bank 1 ceramic temperature"}
+    {"id": "VOLKSWAGEN_OXYGEN_SNS_1_BANK_1_CERAMIC_T_V2", "path": "Engine", "fmt": { "len": 16, "max": 1262, "min": -273.15, "mul": 234.37, "div": 10000, "add": -273.15, "unit": "celsius" }, "name": "Oxygen sensor 1 bank 1 ceramic temperature"}
   ]},
 { "hdr": "FC00", "rax": "FE0076", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1291"}, "freq": 5,
   "signals": [
