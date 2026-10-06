@@ -1213,7 +1213,8 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "101A"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_A_C_COMPRESSOR_TORQUE", "path": "Engine", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "A/C compressor torque"}
+    {"id": "VOLKSWAGEN_A_C_COMPRESSOR_TORQUE", "path": "Engine", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "A/C compressor torque"},
+    {"id": "VOLKSWAGEN_AC_COMP_TQ",            "path": "Engine", "fmt": { "len": 16, "max": 3276,   "min": -3276,   "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Air conditioning compressor torque"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "101B"}, "freq": 0.25,
   "signals": [
@@ -1285,7 +1286,7 @@
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "104B"}, "freq": 0.25,
   "signals": [
     {"id": "VOLKSWAGEN_PQ35_AC_COMP_TRQ", "path": "Climate", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Air conditioning compressor torque"},
-    {"id": "VOLKSWAGEN_AC_COMP_TQ",       "path": "Engine",  "fmt": { "len": 16, "max": 3276,   "min": -3276,   "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Air conditioning compressor torque"}
+    {"id": "VOLKSWAGEN_AC_COMP_TQ_V2",    "path": "Engine",  "fmt": { "len": 16, "max": 3276,   "min": -3276,   "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Air conditioning compressor torque"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "104C"}, "freq": 1,
   "signals": [
@@ -1306,7 +1307,9 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "105A"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_BATTERY_V", "path": "Battery", "fmt": { "len": 16, "max": 1310.7, "div": 50, "unit": "volts" }, "name": "Battery voltage", "suggestedMetric": "starterBatteryVoltage"}
+    {"id": "VOLKSWAGEN_BATTERY_V",   "path": "Battery", "fmt": { "len": 16, "max": 1310.7, "div": 50, "unit": "volts" }, "name": "Battery voltage", "suggestedMetric": "starterBatteryVoltage"},
+    {"id": "VOLKSWAGEN_BAT_V_PRE19", "path": "Battery", "fmt": { "len": 16, "max": 1310,   "div": 50, "unit": "volts" }, "name": "Battery voltage"},
+    {"id": "VOLKSWAGEN_BAT_V",       "path": "Battery", "fmt": { "len": 16, "max": 1310,   "div": 50, "unit": "volts" }, "name": "Battery voltage", "suggestedMetric": "starterBatteryVoltage"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "105C"}, "freq": 1,
   "signals": [
@@ -2846,7 +2849,8 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "14F9"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_MAIN_CAT_OSC_AGE_CORRECTION_FACTOR", "path": "Engine", "fmt": { "len": 16, "max": 2, "mul": 2, "div": 65535, "unit": "scalar" }, "name": "Main cat oxygen storage capacity age correction factor"}
+    {"id": "VOLKSWAGEN_MAIN_CAT_OSC_AGE_CORRECTION_FACTOR", "path": "Engine", "fmt": { "len": 16, "max": 2,     "mul": 2,     "div": 65535,      "unit": "scalar" }, "name": "Main cat oxygen storage capacity age correction factor"},
+    {"id": "VOLKSWAGEN_MAIN_CAT_AGING",                     "path": "Engine", "fmt": { "len": 16, "max": 0.199, "mul": 24581, "div": 8054700000, "unit": "scalar" }, "name": "Main catalyst aging factor"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1502"}, "freq": 0.25,
   "signals": [
@@ -3490,7 +3494,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2017"}, "freq": 0.25,
   "signals": [
-    {"id": "VOLKSWAGEN_AC_COMP_TQ_V2", "path": "Engine", "fmt": { "len": 16, "max": 327.67, "min": -327.68, "div": 100, "sign": true, "unit": "newtonMeters" }, "name": "Air conditioning compressor torque"}
+    {"id": "VOLKSWAGEN_AC_COMP_TQ_V3", "path": "Engine", "fmt": { "len": 16, "max": 327.67, "min": -327.68, "div": 100, "sign": true, "unit": "newtonMeters" }, "name": "Air conditioning compressor torque"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2019"}, "freq": 1,
   "signals": [
