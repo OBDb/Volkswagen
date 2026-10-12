@@ -119,51 +119,51 @@
   ]},
 { "hdr": "70E", "rax": "778", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "42BB"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_EVAPORATOR_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "unit": "celsius" }, "name": "Evaporator temperature"}
+    {"id": "VOLKSWAGEN_EVAPORATOR_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045, "unit": "celsius" }, "name": "Evaporator temperature"}
   ]},
 { "hdr": "70E", "rax": "778", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "42BC"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_LEFT_FOOTWELL_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045.9375, "unit": "celsius" }, "name": "Left footwell air outlet temperature"}
+    {"id": "VOLKSWAGEN_LEFT_FOOTWELL_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045, "unit": "celsius" }, "name": "Left footwell air outlet temperature"}
   ]},
 { "hdr": "70E", "rax": "778", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "42BD"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_RIGHT_FOOTWELL_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045.9375, "unit": "celsius" }, "name": "Right footwell air outlet temperature"}
+    {"id": "VOLKSWAGEN_RIGHT_FOOTWELL_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045, "unit": "celsius" }, "name": "Right footwell air outlet temperature"}
   ]},
 { "hdr": "70E", "rax": "778", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "42BE"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_LEFT_REAR_HI_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045.9375, "unit": "celsius" }, "name": "Left rear upper air outlet temperature"}
+    {"id": "VOLKSWAGEN_LEFT_REAR_HI_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045, "unit": "celsius" }, "name": "Left rear upper air outlet temperature"}
   ]},
 { "hdr": "70E", "rax": "778", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "42C0"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_RIGHT_REAR_HI_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045.9375, "unit": "celsius" }, "name": "Right rear upper air outlet temperature"}
+    {"id": "VOLKSWAGEN_RIGHT_REAR_HI_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045, "unit": "celsius" }, "name": "Right rear upper air outlet temperature"}
   ]},
 { "hdr": "70E", "rax": "778", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "42C1"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_LEFT_REAR_FOOTWELL_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045.9375, "unit": "celsius" }, "name": "Left rear footwell air outlet temperature"}
+    {"id": "VOLKSWAGEN_LEFT_REAR_FOOTWELL_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045, "unit": "celsius" }, "name": "Left rear footwell air outlet temperature"}
   ]},
 { "hdr": "70E", "rax": "778", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "42C2"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_RIGHT_REAR_FOOTWELL_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045.9375, "unit": "celsius" }, "name": "Right rear footwell air outlet temperature"}
+    {"id": "VOLKSWAGEN_RIGHT_REAR_FOOTWELL_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045, "unit": "celsius" }, "name": "Right rear footwell air outlet temperature"}
   ]},
 { "hdr": "70E", "rax": "778", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "42C3"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_LEFT_SIDE_AIR_OUTLET_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045.9375, "unit": "celsius" }, "name": "Left side air outlet temperature"}
+    {"id": "VOLKSWAGEN_LEFT_SIDE_AIR_OUTLET_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045, "unit": "celsius" }, "name": "Left side air outlet temperature"}
   ]},
 { "hdr": "70E", "rax": "778", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "42C4"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_RIGHT_SIDE_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045.9375, "unit": "celsius" }, "name": "Right side air outlet temperature"}
+    {"id": "VOLKSWAGEN_RIGHT_SIDE_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045, "unit": "celsius" }, "name": "Right side air outlet temperature"}
   ]},
 { "hdr": "70E", "rax": "778", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "42C5"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_LEFT_CENTRAL_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045.9375, "unit": "celsius" }, "name": "Left central air outlet temperature"}
+    {"id": "VOLKSWAGEN_LEFT_CENTRAL_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045, "unit": "celsius" }, "name": "Left central air outlet temperature"}
   ]},
 { "hdr": "70E", "rax": "778", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "42C6"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_RIGHT_CENTRAL_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045.9375, "unit": "celsius" }, "name": "Right central air outlet temperature"}
+    {"id": "VOLKSWAGEN_RIGHT_CENTRAL_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045, "unit": "celsius" }, "name": "Right central air outlet temperature"}
   ]},
 { "hdr": "70E", "rax": "778", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "42C8"}, "freq": 5,
   "signals": [
-    {"id": "VOLKSWAGEN_FRONT_DEFROST_FLAP_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045.9375, "unit": "celsius" }, "name": "Front defrost flap air outlet temperature"}
+    {"id": "VOLKSWAGEN_FRONT_DEFROST_FLAP_T", "path": "Engine", "fmt": { "len": 16, "max": 4045, "min": -50, "div": 16, "add": -50, "nullmax": 4045, "unit": "celsius" }, "name": "Front defrost flap air outlet temperature"}
   ]},
 { "hdr": "70E", "rax": "778", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "5036"}, "freq": 1,
   "signals": [
@@ -363,9 +363,9 @@
 { "hdr": "710", "rax": "77A", "fcm1": true, "dbg": true, "cmd": {"22": "2A61"}, "freq": 1,
   "signals": [
     {"id": "VOLKSWAGEN_SSB_TOTAL_CHARGE",    "path": "Battery", "fmt": {           "len": 32, "max": 100,         "div": 10, "unit": "ampereHours" }, "name": "Start/stop battery total charge"},
-    {"id": "VOLKSWAGEN_MQB_BAT_TOT_CHG",     "path": "Battery", "fmt": {           "len": 32, "max": 429496729.5, "div": 10, "unit": "ampereHours" }, "name": "Battery total charge"},
+    {"id": "VOLKSWAGEN_MQB_BAT_TOT_CHG",     "path": "Battery", "fmt": {           "len": 32, "max": 429496729.5, "div": 10, "unit": "ampereHours" }, "name": "Start/stop battery total charge"},
     {"id": "VOLKSWAGEN_SSB_TOTAL_DISCHARGE", "path": "Battery", "fmt": {"bix": 32, "len": 32, "max": 100,         "div": 10, "unit": "ampereHours" }, "name": "Start/stop battery total discharge"},
-    {"id": "VOLKSWAGEN_MQB_BAT_TOT_DIS",     "path": "Battery", "fmt": {"bix": 32, "len": 32, "max": 429496729.5, "div": 10, "unit": "ampereHours" }, "name": "Battery total discharge"}
+    {"id": "VOLKSWAGEN_MQB_BAT_TOT_DIS",     "path": "Battery", "fmt": {"bix": 32, "len": 32, "max": 429496729.5, "div": 10, "unit": "ampereHours" }, "name": "Start/stop battery total discharge"}
   ]},
 { "hdr": "710", "rax": "77A", "fcm1": true, "dbg": true, "cmd": {"22": "2AB2"}, "freq": 1,
   "signals": [
@@ -529,9 +529,11 @@
   ]},
 { "hdr": "713", "rax": "77D", "fcm1": true, "dbg": true, "cmd": {"22": "18B6"}, "freq": 900,
   "signals": [
-    {"id": "VOLKSWAGEN_CNT_STEER_SUPPORT_ACTIVE",              "path": "Engine", "fmt": {"bix": 6,  "len": 1,  "max": 1,              "unit": "offon"        }, "name": "Counter steer support"},
-    {"id": "VOLKSWAGEN_CNT_STEER_SUPPORT_ODO_RDG_OF_LAST_ACT", "path": "Trips",  "fmt": {"bix": 8,  "len": 24, "max": 1,              "unit": "kilometers"   }, "name": "Counter steer support, odometer, last activated"},
-    {"id": "VOLKSWAGEN_CNT_STEER_SUPPORT_STEERING_TRQ",        "path": "Engine", "fmt": {"bix": 32, "len": 16, "max": 1, "div": 1000, "unit": "newtonMeters" }, "name": "Counter steer support, steering torque"}
+    {"id": "VOLKSWAGEN_CNT_STEER_SUPPORT_ACTIVE",              "path": "Engine",  "fmt": {"bix": 6,  "len": 1,  "max": 1,                     "unit": "offon"        }, "name": "Counter steer support"},
+    {"id": "VOLKSWAGEN_CNT_STEER_SUPPORT_ODO_RDG_OF_LAST_ACT", "path": "Trips",   "fmt": {"bix": 8,  "len": 24, "max": 16777215,              "unit": "kilometers"   }, "name": "Counter steer support, odometer, last activated"},
+    {"id": "VOLKSWAGEN_CSTEER_ODO_LAST_ACTIVATED",             "path": "Control", "fmt": {"bix": 8,  "len": 24, "max": 1,                     "unit": "kilometers"   }, "name": "Counter steer support, odometer"},
+    {"id": "VOLKSWAGEN_CNT_STEER_SUPPORT_STEERING_TRQ",        "path": "Engine",  "fmt": {"bix": 32, "len": 16, "max": 65.535,   "div": 1000, "unit": "newtonMeters" }, "name": "Counter steer support, steering torque"},
+    {"id": "VOLKSWAGEN_CSTEER_STEERING_TORQUE",                "path": "Control", "fmt": {"bix": 32, "len": 16, "max": 1,        "div": 1000, "unit": "newtonMeters" }, "name": "Counter steer support, steering torque"}
   ]},
 { "hdr": "713", "rax": "77D", "fcm1": true, "dbg": true, "cmd": {"22": "2005"}, "freq": 1,
   "signals": [
@@ -4979,8 +4981,8 @@
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "101A"}, "freq": 30,
   "signals": [
-    {"id": "VOLKSWAGEN_PQ35_ODO_3",    "path": "Trips", "fmt": { "len": 24, "max": 16777215,                  "unit": "kilometers" },                   "name": "Odometer #3"},
-    {"id": "VOLKSWAGEN_ODO_MILEAGE_2", "path": "Trips", "fmt": { "len": 16, "max": 65535,                     "unit": "kilometers" },                   "name": "Odometer, mileage 2"},
+    {"id": "VOLKSWAGEN_PQ35_ODO_3",    "path": "Trips", "fmt": { "len": 24, "blsb": true,    "max": 16777215,                      "unit": "kilometers" },                             "name": "Odometer #3"},
+    {"id": "VOLKSWAGEN_ODO_MILEAGE_2", "path": "Trips", "fmt": { "len": 24, "max": 16777215,                  "unit": "kilometers" },                   "name": "Odometer, mileage 2"},
     {"id": "VOLKSWAGEN_ODO_TCM_2",     "path": "Trips", "fmt": { "len": 24, "blsb": true,    "max": 16777215,                      "unit": "kilometers" },                             "name": "Odometer (TCM #2)", "suggestedMetric": "odometer"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1021"}, "freq": 0.25,
@@ -5481,15 +5483,18 @@
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1149"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_MQB_DQ250_SYNCHRONOUS_POS_SIDE_B_GEAR_SELECTOR_2_4", "path": "Transmission", "fmt": { "len": 16, "blsb": true, "max": 655.35, "mul": 100, "div": 10000, "unit": "percent" }, "name": "Synchronous position side B gear selector 2-4"}
+    {"id": "VOLKSWAGEN_MQB_DQ250_SYNCHRONOUS_POS_SIDE_B_GEAR_SELECTOR_2_4", "path": "Transmission", "fmt": { "len": 16, "blsb": true,  "max": 655.35,              "mul": 100,   "div": 10000,                                 "unit": "percent" },                                                       "name": "Synchronous position side B gear selector 2-4"},
+    {"id": "VOLKSWAGEN_DQ250_SYNCHRONOUS_POS_SIDE_B_GEAR_SELECTOR_2_4",     "path": "Transmission", "fmt": { "len": 16, "max": 327.67, "min": -327.68, "mul": 100, "div": 10000,               "sign": true, "unit": "percent" },                "name": "Synchronous position side b gear selector 2-4"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "114A"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_MQB_DQ250_SYNCHRONOUS_POS_SIDE_B_GEAR_SELECTOR_5_N", "path": "Transmission", "fmt": { "len": 16, "blsb": true, "max": 655.35, "mul": 100, "div": 10000, "unit": "percent" }, "name": "Synchronous position side B gear selector 5 and neutral"}
+    {"id": "VOLKSWAGEN_MQB_DQ250_SYNCHRONOUS_POS_SIDE_B_GEAR_SELECTOR_5_N", "path": "Transmission", "fmt": { "len": 16, "blsb": true,  "max": 655.35,              "mul": 100,   "div": 10000,                                 "unit": "percent" },                                                                 "name": "Synchronous position side B gear selector 5 and neutral"},
+    {"id": "VOLKSWAGEN_DQ250_SYNCHRONOUS_POS_SIDE_B_GEAR_SELECTOR_5_N",     "path": "Transmission", "fmt": { "len": 16, "max": 327.67, "min": -327.68, "mul": 100, "div": 10000,               "sign": true, "unit": "percent" },                "name": "Synchronous position side b gear selector 5 and neutral"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "114B"}, "freq": 3600,
   "signals": [
-    {"id": "VOLKSWAGEN_MQB_DQ250_SYNCHRONOUS_POS_SIDE_B_GEAR_SELECTOR_6_R", "path": "Transmission", "fmt": { "len": 16, "blsb": true, "max": 655.35, "mul": 100, "div": 10000, "unit": "percent" }, "name": "Synchronous position side B gear selector 6 and reverse"}
+    {"id": "VOLKSWAGEN_MQB_DQ250_SYNCHRONOUS_POS_SIDE_B_GEAR_SELECTOR_6_R", "path": "Transmission", "fmt": { "len": 16, "blsb": true,  "max": 655.35,              "mul": 100,   "div": 10000,                                 "unit": "percent" },                                                                 "name": "Synchronous position side B gear selector 6 and reverse"},
+    {"id": "VOLKSWAGEN_DQ250_SYNCHRONOUS_POS_SIDE_B_GEAR_SELECTOR_6_R",     "path": "Transmission", "fmt": { "len": 16, "max": 327.67, "min": -327.68, "mul": 100, "div": 10000,               "sign": true, "unit": "percent" },                "name": "Synchronous position side b gear selector 6 and reverse"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "1154"}, "freq": 5,
   "signals": [
@@ -7038,9 +7043,10 @@
   ]},
 { "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "1E0F"}, "freq": 1,
   "signals": [
-    {"id": "VOLKSWAGEN_BMS_T_MIN",      "path": "Battery", "fmt": {           "len": 8, "max": 155, "min": -100, "add": -100, "unit": "celsius" }, "name": "HV battery temperature, minimum"},
-    {"id": "VOLKSWAGEN_BMS_T_MIN_CELL", "path": "Battery", "fmt": {"bix": 8,  "len": 8, "max": 255,                           "unit": "scalar"  }, "name": "HV battery temperature, minimum (cell #)"},
-    {"id": "VOLKSWAGEN_HVBAT_T_MIN_NO", "path": "Battery", "fmt": {"bix": 24, "len": 8, "max": 255,                           "unit": "scalar"  }, "name": "HV battery coldest sensor"}
+    {"id": "VOLKSWAGEN_BMS_T_MIN",      "path": "Battery", "fmt": {           "len": 8,  "max": 155,      "min": -100,            "add": -100, "unit": "celsius" }, "name": "HV battery temperature, minimum"},
+    {"id": "VOLKSWAGEN_BMS_T_MIN_V2",   "path": "Battery", "fmt": {           "len": 16, "max": 1023.984,              "div": 64,              "unit": "celsius" }, "name": "HV battery temperature, minimum"},
+    {"id": "VOLKSWAGEN_BMS_T_MIN_CELL", "path": "Battery", "fmt": {"bix": 8,  "len": 8,  "max": 255,                                           "unit": "scalar"  }, "name": "HV battery temperature, minimum (cell #)"},
+    {"id": "VOLKSWAGEN_HVBAT_T_MIN_NO", "path": "Battery", "fmt": {"bix": 24, "len": 8,  "max": 255,                                           "unit": "scalar"  }, "name": "HV battery coldest sensor"}
   ]},
 { "hdr": "7E5", "rax": "7ED", "din": "03", "dbg": true, "cmd": {"22": "1E10"}, "freq": 1,
   "signals": [
@@ -8281,7 +8287,7 @@
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "dbg": true, "cmd": {"22": "1E33"}, "freq": 1,
   "signals": [
     {"id": "VOLKSWAGEN_HVBAT_CELL_V_MAX",         "path": "Battery", "fmt": {           "len": 16, "max": 15.997, "mul": 2441, "div": 10000, "unit": "volts"  }, "name": "HV battery cell voltage, maximum"},
-    {"id": "VOLKSWAGEN_HVBAT_CELL_V_MAX_V2",      "path": "Battery", "fmt": {           "len": 16, "max": 65.53,               "div": 1000,  "unit": "volts"  }, "name": "HV battery cell voltage, maximum"},
+    {"id": "VOLKSWAGEN_HVBAT_CELL_V_MAX_V2",      "path": "Battery", "fmt": {           "len": 16, "max": 15.999,              "div": 4096,  "unit": "volts"  }, "name": "HV battery cell voltage, maximum"},
     {"id": "VOLKSWAGEN_HVBAT_CELL_V_MAX_2026",    "path": "Battery", "fmt": {           "len": 16, "max": 6.5535,              "div": 10000, "unit": "volts"  }, "name": "HV battery cell voltage, maximum"},
     {"id": "VOLKSWAGEN_HVBAT_CELL_V_MAX_ID",      "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 65535,                             "unit": "scalar" }, "name": "HV battery cell voltage max, ID"},
     {"id": "VOLKSWAGEN_HVBAT_CELL_V_MAX_ID_2026", "path": "Battery", "fmt": {"bix": 16, "len": 8,  "max": 255,                               "unit": "scalar" }, "name": "HV battery cell voltage max, ID"}
@@ -8289,7 +8295,7 @@
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "dbg": true, "cmd": {"22": "1E34"}, "freq": 1,
   "signals": [
     {"id": "VOLKSWAGEN_HVBAT_CELL_V_MIN",         "path": "Battery", "fmt": {           "len": 16, "max": 15.997, "mul": 2441, "div": 10000, "unit": "volts"  }, "name": "HV battery cell voltage, minimum"},
-    {"id": "VOLKSWAGEN_HVBAT_CELL_V_MIN_V2",      "path": "Battery", "fmt": {           "len": 16, "max": 65.53,               "div": 1000,  "unit": "volts"  }, "name": "HV battery cell voltage, minimum"},
+    {"id": "VOLKSWAGEN_HVBAT_CELL_V_MIN_V2",      "path": "Battery", "fmt": {           "len": 16, "max": 15.999,              "div": 4096,  "unit": "volts"  }, "name": "HV battery cell voltage, minimum"},
     {"id": "VOLKSWAGEN_HVBAT_CELL_V_MIN_2026",    "path": "Battery", "fmt": {           "len": 16, "max": 6.5535,              "div": 10000, "unit": "volts"  }, "name": "HV battery cell voltage, minimum"},
     {"id": "VOLKSWAGEN_HVBAT_CELL_V_MIN_ID",      "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 65535,                             "unit": "scalar" }, "name": "HV battery cell voltage min, ID"},
     {"id": "VOLKSWAGEN_HVBAT_CELL_V_MIN_ID_2026", "path": "Battery", "fmt": {"bix": 16, "len": 8,  "max": 255,                               "unit": "scalar" }, "name": "HV battery cell voltage min, ID"}
